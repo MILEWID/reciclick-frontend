@@ -1,0 +1,58 @@
+:root {
+  --fuente-roboto: "Roboto Slab", serif;
+}
+.header-landing {
+  height: 100vh;
+  max-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: var(--fuente-roboto);
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.navbar-nav.navBar-menu > .nav-item > .text-white {
+  color: black !important;
+}
+
+nav {
+  transition: background ease-in 0.1s;
+}
+
+.logo-container {
+  width: 90px;
+  padding-right: 10px;
+}
+nav {
+  font-family: var(--fuente-roboto);
+}
+.navbar-brand {
+  font-weight: bold;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-principal {
+  border-style: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 8px;
+  padding: 8px, 16px, 8px, 16px;
+  margin: 10px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+
+.social-networks i {
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+}
