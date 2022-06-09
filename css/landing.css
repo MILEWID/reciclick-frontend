@@ -1,6 +1,14 @@
 :root {
   --fuente-roboto: "Roboto Slab", serif;
+  --bg-primary: #2C9944;
+  --color-linearDarkBlue: #344767;
+  --color-linearGray: #7B7F99;
 }
+
+body {
+  background-color: #F0F2F5;
+}
+
 .header-landing {
   height: 100vh;
   max-height: 100vh;
@@ -16,7 +24,7 @@ h1 {
   font-weight: bold;
 }
 
-.navbar-nav.navBar-menu > .nav-item > .text-white {
+.navbar-nav.navBar-menu>.nav-item>.text-white {
   color: black !important;
 }
 
@@ -28,9 +36,11 @@ nav {
   width: 90px;
   padding-right: 10px;
 }
+
 nav {
   font-family: var(--fuente-roboto);
 }
+
 .navbar-brand {
   font-weight: bold;
 }
@@ -55,4 +65,251 @@ nav {
   color: white;
   font-size: 30px;
   margin: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       Estilos de la seccion 2 - FIGMA                      */
+/* -------------------------------------------------------------------------- */
+.custom-container {
+  background-color: #fff;
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+.custom-container .custom-container-child {
+  width: 100%;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  transform: translateY(-60px);
+}
+
+.card-sec-2 {
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.card-header-sec-2 {
+  width: 90%;
+  margin: auto;
+  transform: translateY(-15px);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-header-sec-2 img {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body-sec-2 {
+  width: 90%;
+  margin: auto;
+  color: var(--color-linearDarkBlue);
+}
+
+.card-body-sec-2 .card-title-c {
+  font-size: 18px;
+}
+
+.card-body-sec-2 .card-text-c {
+  font-size: 14px;
+  color: var(--color-linearGray);
+}
+
+.custom-btn-primary {
+  background-color: var(--bg-primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.custom-btn-primary:hover {
+  color: #fff;
+}
+
+.benefit-card i {
+  color: var(--bg-primary);
+  font-size: 24px;
+}
+
+.benefit-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: var(--color-linearDarkBlue);
+}
+
+.benefit-card p {
+  color: var(--color-linearGray);
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Estilos de la seccion 3                          */
+/* -------------------------------------------------------------------------- */
+
+.managers-section {
+  background: linear-gradient(180deg, #3E3D45 0%, #202020 100%);
+  min-height: 450px;
+  color: #fff;
+}
+
+.managers-section .title-manager {
+  margin: 0;
+}
+
+.managers-section .p-manager {
+  margin-top: 10px;
+}
+
+.manager-card {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+}
+
+.manager-card__image {
+  width: 120px;
+  height: 100%;
+  transform: translate(15px, -15px);
+  border-radius: 4px;
+  box-shadow: 0 0 1px 1px rgba(151, 172, 198, 0.25);
+}
+
+.manager-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.manager-card__body {
+  flex: 1;
+  padding: 15px 5px;
+  margin-left: 25px;
+}
+
+.manager-card__body .manager_name {
+  color: var(--color-linearDarkBlue);
+  margin: 0;
+  font-size: 16px;
+}
+
+.manager-card__body .manager_position {
+  color: var(--bg-primary);
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.manager-card__body .manager_description {
+  margin: 0;
+  color: var(--color-linearGray);
+  font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Estilos seccion 4                             */
+/* -------------------------------------------------------------------------- */
+
+.patrocinador {
+  width: 100%;
+}
+
+.patrocinador img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stadistic-data {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-stadistic {
+  text-align: center;
+  flex: 1;
+}
+
+.item-stadistic h3 {
+  color: var(--bg-primary);
+  font-size: 30px;
+}
+.item-stadistic span {
+  color: var(--color-linearDarkBlue);
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 3px 0;
+}
+.item-stadistic p {
+  margin: 0;
+  /* width: 80%; */
+  color: var(--color-linearGray);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  .manager-card {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-container {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-container {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .custom-container {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .manager-card {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .manager-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .manager-card__image {
+    margin: auto;
+    width: 140px;
+    transform: translate(0, -15px);
+  }
+
+  .manager-card__body {
+    padding-top: 0;
+    margin-left: 15px;
+  }
+
 }
