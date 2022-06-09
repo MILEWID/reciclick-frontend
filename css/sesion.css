@@ -1,0 +1,131 @@
+:root {
+    --fuente-roboto: "Roboto Slab", serif;
+    --green: #2c9944;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-image{
+    display: flex;
+    background-image: url("../img/sesion.png");
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-formulario{
+    font-family: var(--fuente-roboto);
+    position: absolute;
+    height: 330px;
+    background-color: white;
+    width: 300px;
+
+}
+
+.title-form{
+    position: relative;
+    top: -60px;
+    left: 23px;
+    justify-content: center;
+    background-color: var(--green);
+    width: 253px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.title-form p{
+    color: white;
+
+}
+
+.input-group{
+    margin-top: -30px;
+    padding: 0px 40px;
+}
+
+.btn-success{
+    margin: 20px;
+    background-color: var(--green);
+    font-family: var(--fuente-roboto);
+}
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit button{
+    padding: 10px 20px;
+}
+
+.switch {
+    --button-width: 2em;
+    --button-height: 1.2em;
+    --toggle-diameter: 0.9em;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3em;
+    --color-grey: #cccccc;
+   }
+   
+   .slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--green);
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+   }
+   
+   .switch input[type="checkbox"] {
+    display: none;
+   }
+   
+   .switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+   }
+   
+   .switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+   }
+   
+   .switch{
+       padding: 8px;
+   }
+
+
+   
