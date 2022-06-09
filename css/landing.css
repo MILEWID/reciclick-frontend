@@ -234,31 +234,88 @@ nav {
 .stadistic-data {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .item-stadistic {
   text-align: center;
-  flex: 1;
+  flex: 0 1 240px;
 }
 
 .item-stadistic h3 {
   color: var(--bg-primary);
-  font-size: 30px;
+  font-size: 40px;
 }
 .item-stadistic span {
   color: var(--color-linearDarkBlue);
   text-transform: capitalize;
   display: inline-block;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   font-size: 15px;
   margin: 3px 0;
 }
 .item-stadistic p {
   margin: 0;
-  /* width: 80%; */
   color: var(--color-linearGray);
 }
+.news-letter{
+  width: 100%;
+}
+.news-letter h2{
+  color: var(--color-linearDarkBlue);
+  font-size: 18px;
+}
+.news-letter p{
+  color: var(--color-linearGray);
+  font-size: 15px;
+}
+.box-email-news{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.box-email-news .input-news{
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid var(--color-linearGray);
+  outline: none;
+  width: 75%;
+  min-width: 200px;
+  padding: 10px 15px;
+}
+.box-email-news .btn-news{
+  background-color: var(--bg-primary);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-left: 13px;
+}
+
+.ctn_imag{
+  width: 100%;
+  border-radius: 12px;
+}
+.ctn_imag img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               estilos footer                               */
+/* -------------------------------------------------------------------------- */
+.footer{
+  margin-top: 20px;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
@@ -271,15 +328,27 @@ nav {
 
 @media screen and (max-width: 992px) {
   .custom-container {
-    width: calc(100% - 150px);
-    margin-left: 150px;
+    width: calc(100% - 50px);
+    margin-left: 50px;
+  }
+  .item-stadistic{
+    margin-bottom: 20px;
+  }
+  .box-email-news .input-news{
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .custom-container {
-    width: calc(100% - 50px);
-    margin-left: 50px;
+  .item-stadistic{
+    flex-basis: 200px;
+  }
+  .box-email-news .input-news{
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  .box-email-news .btn-news{
+    margin-left: 2px;
   }
 }
 
