@@ -13,42 +13,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
     <link rel="stylesheet" href="../css/landing.css">
 </head>
 
 <body>
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-transparent p-md-3">
-        <div class="container ">
-            <div class="logo-container">
-                <img class="logo" src="../img/logo.png" alt="Reciclick">
-            </div>
-            <a class="navbar-brand text-white" href="#">RECICLICK</a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand logo-navbar" href="../php/index.php">
+                <div class="logo-container">
+                    <img class="logo" src="../img/logo.png" alt="Reciclick">
+                </div>
+                <span>RECICLICK</span>
+            </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon mt-2">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </span>
-    </button>
+                <span class="navbar-toggler-icon mt-2">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </span>
+            </button>
             <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Nosotros</a>
+                        <a class="nav-link" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white btn-suc" href="#">Contáctanos</a>
+                        <a class="nav-link btn-suc" href="#">Contáctanos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Calculadora</a>
+                        <a class="nav-link" href="#">Calculadora</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white btn-sesion" href="../php/iniciarsesión.php">Iniciar Sesión</a>
+                        <a class="nav-link btn-sesion" href="../php/iniciarsesión.php">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -61,12 +60,9 @@
         <button class="btn-principal" href="">CREAR CUENTA</button>
         <p>Encuéntranos en: </p>
         <div>
-            <a class="social-networks" target="_blank" href="https://www.instagram.com/"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a class="social-networks" target="_blank" href="https://www.facebook.com/AICADE.2020"><i
-                    class="fab fa-facebook-f"></i></a>
-            <a class="social-networks" target="_blank" href="https://twitter.com/?lang=es"><i
-                    class="fa-brands fa-twitter"></i></a>
+            <a class="social-networks" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-networks" target="_blank" href="https://www.facebook.com/AICADE.2020"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-networks" target="_blank" href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
         </div>
     </section>
     <!-- Sección de beficios -->
@@ -222,9 +218,9 @@
             </div>
         </div>
     </section>
-   <?php 
-   include("../layout/footer.php");
-   ?>
+    <?php
+    include("../layout/footer.php");
+    ?>
 </body>
 
 </html>

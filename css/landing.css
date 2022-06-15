@@ -10,11 +10,11 @@ body {
   font-family: var(--fuente-roboto);
 }
 
-.bg-light{
+.bg-light {
   background-color: #fff;
 }
 
-.text-white{
+.text-white {
   color: white !important;
 }
 
@@ -33,23 +33,40 @@ h1 {
   font-weight: bold;
 }
 
-.navbar-nav.navBar-menu>.nav-item>.text-white {
+nav {
+  font-family: var(--fuente-roboto);
+  transition: background ease-in 0.1s;
+}
+
+.navbar.navbar-light .navbar-toggler .navbar-toggler-icon .navbar-toggler-bar {
+  background-color: #000 !important;
+}
+
+.navbar-nav.navBar-menu .nav-item .nav-link {
   color: black !important;
 }
 
+.navbar.navbar-transparent .navbar-collapse{
+  box-shadow: none;
+}
 
-
-nav {
-  transition: background ease-in 0.1s;
+.logo-navbar {
+  display: flex;
+  align-items: center;
+}
+.logo-navbar span {
+  color: #fff;
+}
+.navbar.navbar-light .logo-navbar span {
+  color: #000;
 }
 
 .logo-container {
   width: 90px;
-  padding-right: 10px;
 }
 
-nav {
-  font-family: var(--fuente-roboto);
+.logo-container>img {
+  width: 100%;
 }
 
 .navbar-brand {
@@ -61,7 +78,7 @@ nav {
   height: 100%;
 }
 
-.btn-success{
+.btn-success {
   background-color: var(--bg-primary);
   font-size: 15px;
   font-family: var(--fuente-roboto);
@@ -259,6 +276,7 @@ nav {
   color: var(--bg-primary);
   font-size: 40px;
 }
+
 .item-stadistic span {
   color: var(--color-linearDarkBlue);
   text-transform: capitalize;
@@ -268,27 +286,33 @@ nav {
   font-size: 15px;
   margin: 3px 0;
 }
+
 .item-stadistic p {
   margin: 0;
   color: var(--color-linearGray);
 }
-.news-letter{
+
+.news-letter {
   width: 100%;
 }
-.news-letter h2{
+
+.news-letter h2 {
   color: var(--color-linearDarkBlue);
   font-size: 18px;
 }
-.news-letter p{
+
+.news-letter p {
   color: var(--color-linearGray);
   font-size: 15px;
 }
-.box-email-news{
+
+.box-email-news {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.box-email-news .input-news{
+
+.box-email-news .input-news {
   height: 35px;
   border-radius: 8px;
   border: 1px solid var(--color-linearGray);
@@ -297,7 +321,8 @@ nav {
   min-width: 200px;
   padding: 10px 15px;
 }
-.box-email-news .btn-news{
+
+.box-email-news .btn-news {
   background-color: var(--bg-primary);
   border: none;
   cursor: pointer;
@@ -309,11 +334,12 @@ nav {
   margin-left: 13px;
 }
 
-.ctn_imag{
+.ctn_imag {
   width: 100%;
   border-radius: 12px;
 }
-.ctn_imag img{
+
+.ctn_imag img {
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -322,7 +348,7 @@ nav {
 /* -------------------------------------------------------------------------- */
 /*                               estilos footer                               */
 /* -------------------------------------------------------------------------- */
-.footer{
+.footer {
   margin-top: 20px;
   padding: 20px;
   font-weight: bold;
@@ -344,23 +370,27 @@ nav {
     width: calc(100% - 50px);
     margin-left: 50px;
   }
-  .item-stadistic{
+
+  .item-stadistic {
     margin-bottom: 20px;
   }
-  .box-email-news .input-news{
+
+  .box-email-news .input-news {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .item-stadistic{
+  .item-stadistic {
     flex-basis: 200px;
   }
-  .box-email-news .input-news{
+
+  .box-email-news .input-news {
     width: 60%;
     margin-bottom: 10px;
   }
-  .box-email-news .btn-news{
+
+  .box-email-news .btn-news {
     margin-left: 2px;
   }
 }
@@ -394,20 +424,25 @@ nav {
     margin-left: 15px;
   }
 
+  .navbar{
+    padding: 0.5rem 0;
+  }
+
 }
 
-.cnt-logo-footer{
+.cnt-logo-footer {
   color: #202020;
   width: 100px;
 }
-.cnt-logo-footer img{
+
+.cnt-logo-footer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* registro */
-.img-register{
+.img-register {
   width: 100%;
   height: 100vh;
 }
