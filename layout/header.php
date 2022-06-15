@@ -1,28 +1,31 @@
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-transparent p-md-3">
+    <nav class="navbar sticky-top navbar-expand-lg bg-light p-md-3">
         <div class="container">
             <div class="logo-container">
                 <img class="logo" src="../img/logo.png" alt="Reciclick">
             </div>
-            <a class="navbar-brand text-white" href="#">RECICLICK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <a class=" " href="../php/index.php">RECICLICK</a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Nosotros</a>
+                        <a class="nav-link " href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white btn-suc" href="#">Contáctanos</a>
+                        <a class="nav-link btn-suc" href="#">Contáctanos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Calculadora</a>
+                        <a class="nav-link" href="#">Calculadora</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white btn-sesion" href="../html/iniciarsesión.html">Iniciar Sesión</a>
+                        <a class="nav-link  btn-sesion" href="../php/iniciarsesión.php">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>

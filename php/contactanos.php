@@ -13,11 +13,15 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/landing.css">
     <link rel="stylesheet" href="../css/contactos.css">
 
     <title>Contáctanos</title>
 </head>
 <body>
+<?php 
+include("../layout/header.php");
+?>
     <section>
         <div class="container py-4">
         <div class="row">
@@ -71,5 +75,8 @@
         </div>
         </div>
       </section>
+      <?php 
+   include("../layout/footer.php");
+   ?>
 </body>
 </html>
