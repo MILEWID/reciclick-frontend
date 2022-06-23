@@ -41,13 +41,19 @@
                         <a class="nav-link" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-suc" href="#">Contáctanos</a>
+                        <a class="nav-link btn-suc" href="../php/contactanos.php">Contáctanos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Calculadora</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn-sesion" href="../php/iniciarsesión.php">Iniciar Sesión</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Cuenta
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../php/iniciarsesión.php">Iniciar Sesión </a></li>
+                            <li><a class="dropdown-item" href="../php/registrate.php">Regístrate</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -57,7 +63,7 @@
     <section class="header-landing w-100 d-flex flex-column justify-content-center align-items-center">
         <h1 class="text-white">RECICLICK</h1>
         <p> Sistema de Gestión de RAEES para pequeñas, medianas y grandes empresas.</p>
-        <button class="btn-principal" href="">CREAR CUENTA</button>
+        <button class="btn-principal"><a href="../php/registrate.php" target="_blank">CREAR CUENTA</a></button>
         <p>Encuéntranos en: </p>
         <div>
             <a class="social-networks" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>

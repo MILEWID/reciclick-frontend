@@ -23,10 +23,10 @@
 include("../layout/header.php");
 ?>
     <section>
-        <div class="container py-4">
+        <div class="">
         <div class="row">
           <div class="col-6">
-            <div class=" mx-auto d-flex justify-content-center flex-column">
+            <div class="container mx-auto py-4 d-flex justify-content-center flex-column">
               <h3 class="text-center">Contáctanos   </h3>
               <form role="form" id="contact-form" method="post" autocomplete="off">
                 <div class="card-body">
@@ -61,7 +61,7 @@ include("../layout/header.php");
                         <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">Estoy de acuerdo con los  <a href="javascript:;" class="text-dark"><u>Terminos y Conditiones</u></a>.</label>
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                       <button type="submit" class="btn btn-success w-100">Send Message</button>
                     </div>
                   </div>
