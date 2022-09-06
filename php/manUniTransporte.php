@@ -31,7 +31,7 @@
                         <div class="row py-2">
                             <div class="col-lg-12 ">
                                 <div class="mb-4">
-                                    <h1>Salida de RAEE</h1>
+                                    <h1>Transporte de RAEE</h1>
                                 </div>
                                 <label>Etapa de transporte de RAEE:</label>
                                 <div class="avatar-group mb-4">
@@ -62,18 +62,10 @@
                                     </a>
                                 </div>
                                 <div class="row ">
-                                    <div class="col-12 col-md-6">
-                                        <div class="input-group input-group-static mb-4">
-                                            <label>Nombre del desecho de acuerdo al listado nacional: </label>
-                                            <input class="form-control" placeholder="Desecho ABC" type="text">
+                                <div class="input-group input-group-static mb-4">
+                                            <label>Ruta hasta la entrega del RAEE: </label>
+                                            <input class="form-control" placeholder="Riobamba - Ambato - Quito" type="text">
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="input-group input-group-static mb-4">
-                                            <label>Peso total en Kilogramos:</label>
-                                            <input class="form-control" placeholder="100" type="number">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-6 justify-content-center flex">
                                     <button type="submit" class="btn btn-success w-100">Guardar</button>
