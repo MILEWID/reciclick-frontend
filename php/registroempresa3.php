@@ -31,13 +31,13 @@
                         <div class="row py-2">
                             <div class="col-lg-12 ">
                                 <div class="mb-4">
-                                    <h1>Información general</h1>
+                                    <h1>Códigos ambientales</h1>
                                 </div>
                                 <div class="row ">
 
                                     <div class="input-group input-group-static mb-4">
-                                        <label>RUC de la empresa: </label>
-                                        <input class="form-control" placeholder="0601234567001" type="text">
+                                        <label>Número de registro: </label>
+                                        <input class="form-control" placeholder="NUM01REG02" type="text">
                                     </div>
 
 
@@ -47,32 +47,12 @@
                                 <div class="row ">
 
                                     <div class="input-group input-group-static mb-4">
-                                        <label>Razón social:</label>
-                                        <input class="form-control" placeholder="EMPRESA S.A." type="text">
+                                        <label>Número de licencia ambiental:</label>
+                                        <input class="form-control" placeholder="NUM01LIC02AMB03" type="text">
                                     </div>
                                 </div>
 
                             </div>
-
-                            <div class="row">
-
-                                <div class="input-group input-group-static mb-4">
-                                    <label>Teléfono:</label>
-                                    <input class="form-control" placeholder="031234567" type="text">
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="input-group input-group-static mb-4">
-                                    <label>Dirección:</label>
-                                    <input class="form-control" placeholder="Calle principal 01-02 y calle secundaria"
-                                        type="text">
-                                </div>
-
-                            </div>
-
 
                             <div class="col-lg-6 justify-content-center flex">
                                 <button type="submit" class="btn btn-success w-100">Continuar</button>
