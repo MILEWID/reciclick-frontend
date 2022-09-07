@@ -27,7 +27,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index-2.html"><img src="../img/logo-texto.png" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="index-2.html"><img src="../img/logo-texto2.png" alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="index-2.html"><img src="../img/logo.png" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -179,14 +179,14 @@
               <span class="menu-title">Administración</span>
             </a>
           </li>
-          <li class="nav-item <?php echo $pagina== 'dashboard' ? 'active': ''?>">
-            <a class="nav-link " href="?p=dashboard">
+          <li class="nav-item <?php echo $pagina== 'usuario' ? 'active': ''?>">
+            <a class="nav-link " href="?p=usuario">
               <i class="fa fa-user menu-icon"></i>
-              <span class="menu-title">Usuario</span>
+              <span class="menu-title">Tu cuenta</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/widgets.html">
+          <li class="nav-item <?php echo $pagina== 'datos-empresa' ? 'active': ''?>">
+            <a class="nav-link" href="?p=datos-empresa">
               <i class="fa fa-building menu-icon"></i>
               <span class="menu-title">Datos de la Empresa</span>
             </a>
@@ -254,6 +254,7 @@
       <!-- Custom js for this page-->
   <script src="../javascript/admin/data-table.js"></script>
   <!-- End custom js for this page-->
+  <script src="../../js/wizard.js"></script>
 </body>
 
 

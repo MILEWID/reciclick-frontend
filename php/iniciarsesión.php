@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="ctn-btn-login">
-                        <a href="../php/administracion/transportistas/dashboard.php" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
+                        <a href="../layout/navbar-admin.php" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
                     </div>
             </form>
 
