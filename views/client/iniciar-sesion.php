@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/landing.css">
-    <link rel="stylesheet" href="../css/sesion.css">
+    <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/sesion.css">
     <!-- <link rel="stylesheet" href="../css/nav.css"> -->
 </head>
 
@@ -22,9 +22,9 @@
     <div class="container-image">
         <div class="container-formulario justify-content-center">
             <div class="title-form">
-                <a class="login-container-logo" href="../php/index.php">
+                <a class="login-container-logo" href="<?php echo URL_BASE_APP; ?>">
                     <div class="logo-container">
-                        <img class="logo" src="../img/logo.png" alt="Reciclick">
+                        <img class="logo" src="img/logo.png" alt="Reciclick">
                     </div>
                     <span>RECICLICK</span>
                 </a>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="ctn-btn-login">
-                        <a href="../layout/navbar-admin.php" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
+                        <a href="<?php echo URL_BASE_APP; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
                     </div>
             </form>
 

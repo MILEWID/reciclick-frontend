@@ -14,9 +14,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/registrate.css">
-    <link rel="stylesheet" href="../css/landing.css">
+    <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <link rel="stylesheet" href="css/registrate.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
         </div>
     </div>
     </div>
-    <script src="../javascript/register.js"></script>
+    <script src="javascript/register.js"></script>
 </body>
 
 </html>

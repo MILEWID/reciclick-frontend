@@ -14,9 +14,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/registrate.css">
-    <link rel="stylesheet" href="../css/landing.css">
+    <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <link rel="stylesheet" href="css/registrate.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 
 <body>
@@ -31,12 +31,12 @@
                         <div class="row py-2">
                             <div class="col-lg-12 ">
                                 <div class="mb-4">
-                                    <h1>Transporte de RAEE</h1>
+                                    <h1>Salida de RAEE</h1>
                                 </div>
                                 <label>Etapa de transporte de RAEE:</label>
                                 <div class="avatar-group mb-4">
                                     <a href="javascript:;" class="avatar avatar-lg rounded-circle"
-                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Transporte">
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Empresa">
                                         <div class="icon-usuario">
                                             <i class="fa-solid fa-user"></i>
                                         </div>
@@ -62,10 +62,18 @@
                                     </a>
                                 </div>
                                 <div class="row ">
-                                <div class="input-group input-group-static mb-4">
-                                            <label>Ruta hasta la entrega del RAEE: </label>
-                                            <input class="form-control" placeholder="Riobamba - Ambato - Quito" type="text">
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Nombre del desecho de acuerdo al listado nacional: </label>
+                                            <input class="form-control" placeholder="Desecho ABC" type="text">
                                         </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Peso total en Kilogramos:</label>
+                                            <input class="form-control" placeholder="100" type="number">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-6 justify-content-center flex">
                                     <button type="submit" class="btn btn-success w-100">Guardar</button>
@@ -78,7 +86,7 @@
             </div>
         </div>
     </div>
-    <script src="../javascript/register.js"></script>
+    <script src="javascript/register.js"></script>
 </body>
 
 </html>

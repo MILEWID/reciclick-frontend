@@ -1,8 +1,8 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-light ">
     <div class="container-fluid">
-        <a class="navbar-brand logo-navbar" href="../php/index.php">
+        <a class="navbar-brand logo-navbar" href="<?php echo URL_BASE_APP ?>">
             <div class="logo-container">
-                <img class="logo" src="../img/logo.png" alt="Reciclick">
+                <img class="logo" src="img/logo.png" alt="Reciclick">
             </div>
             <span>RECICLICK</span>
         </a>

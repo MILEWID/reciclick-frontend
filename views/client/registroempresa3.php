@@ -14,9 +14,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/registrate.css">
-    <link rel="stylesheet" href="../css/landing.css">
+    <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <link rel="stylesheet" href="css/registrate.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 
 <body>
@@ -31,13 +31,13 @@
                         <div class="row py-2">
                             <div class="col-lg-12 ">
                                 <div class="mb-4">
-                                    <h1>Responsables de la empresa</h1>
+                                    <h1>Códigos ambientales</h1>
                                 </div>
                                 <div class="row ">
 
                                     <div class="input-group input-group-static mb-4">
-                                        <label>Nombre del responsable de la empresa: </label>
-                                        <input class="form-control" placeholder="José Pérez" type="text">
+                                        <label>Número de registro: </label>
+                                        <input class="form-control" placeholder="NUM01REG02" type="text">
                                     </div>
 
 
@@ -47,28 +47,16 @@
                                 <div class="row ">
 
                                     <div class="input-group input-group-static mb-4">
-                                        <label>Teléfono:</label>
-                                        <input class="form-control" placeholder="031234567" type="text">
-                                    </div>
-                                </div>
-
-                                <div class="row ">
-
-                                    <div class="input-group input-group-static mb-4">
-                                        <label>Cargo:</label>
-                                        <input class="form-control" placeholder="Gerente" type="text">
+                                        <label>Número de licencia ambiental:</label>
+                                        <input class="form-control" placeholder="NUM01LIC02AMB03" type="text">
                                     </div>
                                 </div>
 
                             </div>
 
-                            <div class="form-check form-switch mb-4 d-flex align-items-center">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
-                                    <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">Acepto los <a href="javascript:;" class="text-dark"><u>Términos y Condiciones</u></a>.</label>
-                                </div>
-                                <div class="col-lg-6 justify-content-center flex">
-                                    <button type="submit" class="btn btn-success w-100">Finalizar registro</button>
-                                </div>
+                            <div class="col-lg-6 justify-content-center flex">
+                                <button type="submit" class="btn btn-success w-100">Continuar</button>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -77,7 +65,7 @@
         </div>
     </div>
     </div>
-    <script src="../javascript/register.js"></script>
+    <script src="javascript/register.js"></script>
 </body>
 
 </html>
