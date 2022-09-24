@@ -12,5 +12,3 @@
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/settings.js"></script>
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/todolist.js"></script>
 <!-- endinject -->
-<!-- Custom js for this page-->
-<!-- End custom js for this page-->

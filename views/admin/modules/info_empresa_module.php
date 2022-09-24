@@ -1,30 +1,37 @@
 <div class="row">
    <div class="col-12 grid-margin">
       <div class="card">
-         <div class="card-body">
-            <h4 class="card-title">jquery-steps wizard</h4>
+         <div class="card-body custom">
+            <h4 class="card-title">UN TITULO BONITO</h4>
             <form id="example-form" action="#">
-               <div>
-                  <h3>Account</h3>
+               <div class="custom-container">
+                  <h3>Datos de la empresa</h3>
                   <section>
-                     <h4>Account</h4>
                      <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <label>RUC</label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese el RUC">
+                        <small id="emailHelp" class="form-text text-muted">Este va a ser un texto de ayuda</small>
                      </div>
                      <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <label>Nombre de la empresa</label>
+                        <input type="text" class="form-control" placeholder="Ingrese el nombre de la empresa">
+                     </div>
+                     <div class="row px-2 mb-1">
+                        <div class="col-12 col-md-6">
+                           <p class="text-address"></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="container_map_address" id="myMaps">
+                           </div>
+                        </div>
                      </div>
                      <div class="form-group">
                         <label>Confirm Password</label>
                         <input type="password" class="form-control" placeholder="Confirm password">
                      </div>
                   </section>
-                  <h3>Profile</h3>
+                  <h3>Datos del representante</h3>
                   <section>
-                     <h4>Profile</h4>
                      <div class="form-group">
                         <label>First name</label>
                         <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter first name">
@@ -38,22 +45,11 @@
                         <input type="password" class="form-control" placeholder="Profession">
                      </div>
                   </section>
-                  <h3>Comments</h3>
+                  <h3>Otros datos</h3>
                   <section>
-                     <h4>Comments</h4>
                      <div class="form-group">
                         <label>Comments</label>
                         <textarea class="form-control" rows="3"></textarea>
-                     </div>
-                  </section>
-                  <h3>Finish</h3>
-                  <section>
-                     <h4>Finish</h4>
-                     <div class="form-check">
-                        <label class="form-check-label">
-                           <input class="checkbox" type="checkbox">
-                           I agree with the Terms and Conditions.
-                        </label>
                      </div>
                   </section>
                </div>
