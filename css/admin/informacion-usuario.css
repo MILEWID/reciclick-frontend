@@ -1,0 +1,98 @@
+.container-secondary-buttons {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.container-photo-profile{
+   position: relative;
+   height: 80px;
+   width: 80px;
+}
+
+.container-photo-profile:hover > .buttonChangePicture{
+   z-index: 20;
+}
+
+.container-photo-profile >.pictureUser{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   border-radius: 100%;
+   background-color: royalblue;
+   z-index: 10;
+   overflow: hidden;
+}
+
+.pictureUser > img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.container-photo-profile > .buttonChangePicture{
+   position: absolute;
+   display: block;
+   height: 100%;
+   width: 100%;
+   border-radius: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+   outline: none;
+   border: none;
+   z-index: 1;
+}
+.buttonChangePicture > img{
+   image-rendering: auto;
+   width: 20px;
+
+}
+
+button[data-action-button="save"].saving{
+   position: relative;
+   padding-left: 30px;
+}
+button[data-action-button="save"].saving::before{
+   display: inline-block;
+   animation: rotation 0.8s linear infinite;
+}
+
+button[data-action-button="save"]::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto 0;
+   left: 8px;
+   width: 18px;
+   height: 18px;
+   border: 2px solid #fff;
+   border-bottom-color: transparent;
+   border-radius: 50%;
+   display: none;
+
+   box-sizing: border-box;
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  /* margin-top: 2px; */
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.8s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
