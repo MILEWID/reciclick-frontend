@@ -10,6 +10,7 @@ class Core
 
    private function init_project()
    {
+      require 'vendor/autoload.php';
       // inicializar cookies
       // inicializar valirables de sesion 
       // inicializar archivos de configuracion 

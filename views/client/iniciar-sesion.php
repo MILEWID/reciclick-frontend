@@ -48,9 +48,9 @@
                             </label>
                             <span class="text-session">Mantener sesión iniciada</span>
                         </div>
-                    </div>
+                    </div>  
                     <div class="ctn-btn-login">
-                        <a href="<?php echo URL_BASE_APP; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
+                        <a href="<?php echo URL_BASE_APP.'admin/dashboard'; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
                     </div>
             </form>
 

@@ -1,170 +1,67 @@
 <div class="page-header">
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Listado de Manifiestos</h4>
-              <div class="row">
-                <div class="col-12">
-                  <div class="table-responsive">
-                    <table id="order-listing" class="table">
-                      <thead>
-                        <tr>
-                            <th>Codigo</th>
-                            <th>Responsable</th>
-                            <th>Cargo</th>
-                            <th>RAEE  a transportar </th>
-                            <th>Fecha Entrega</th>
-                            <th>Placas </th>
-                            <th>Manifiesto </th>
-                            <th>Acciones </th>
-    
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2012/08/03</td>
-                            <td>Edinburgh</td>
-                            <td>New York</td>
-                            <td>$1500</td>
-                            <td>$3200</td>
-                            <td>
-                              <label class="badge badge-info">On hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2015/04/01</td>
-                            <td>Doe</td>
-                            <td>Brazil</td>
-                            <td>$4500</td>
-                            <td>$7500</td>
-                            <td>
-                              <label class="badge badge-danger">Pending</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2010/11/21</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>2016/01/12</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>2017/12/28</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>2000/10/30</td>
-                            <td>Sam</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-info">On-hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>2011/03/11</td>
-                            <td>Cris</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>2015/06/25</td>
-                            <td>Tim</td>
-                            <td>Italy</td>
-                            <td>$6300</td>
-                            <td>$2100</td>
-                            <td>
-                              <label class="badge badge-info">On-hold</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>2016/11/12</td>
-                            <td>John</td>
-                            <td>Tokyo</td>
-                            <td>$2100</td>
-                            <td>$6300</td>
-                            <td>
-                              <label class="badge badge-success">Closed</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>2003/12/26</td>
-                            <td>Tom</td>
-                            <td>Germany</td>
-                            <td>$1100</td>
-                            <td>$2300</td>
-                            <td>
-                              <label class="badge badge-danger">Pending</label>
-                            </td>
-                            <td>
-                              <button class="btn btn-outline-primary">View</button>
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Listado de Manifiestos</h4>
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table id="order-listing" class="table">
+            <thead>
+              <tr>
+                <th>Codigo</th>
+                <th>Empresa Generadora </th>
+                <th>RAEE a transportar </th>
+                <th>Nombre del Transportista </th>
+                <th>Empresa Destiniantaria</th>
+                <th>Manifiesto </th>
+                <th>Acciones </th>
 
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EIC1343</td>
+                <td>Jose Alfredo </td>
+                <td>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-aee">Ver</button>
+                  </div>
+                </td>
+                <td>Jose Chavez </td>
+                <td>RINOPLAST </td>
+                <td><a href="">pdf</a></td>
+                <td>acciones </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Modal Mostrar RAEE del manifiesto   -->
+<div class="modal fade" id="modal-aee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel-2">AEE a transportar</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success">Submit</button>
+                          <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
