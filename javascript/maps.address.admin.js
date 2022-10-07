@@ -24,7 +24,7 @@ const urlLocationIQ = (lat, lon) => {
    return `https://us1.locationiq.com/v1/reverse?key=${API_KEY}&lat=${lat}&lon=${lon}&format=json`
 }
 
-const $textAddress = document.querySelector('.text-address');
+const $inputDireccion = document.querySelector('#inputDirección');
 const map = L.map('myMaps').fitWorld();
 let marker = undefined;
 
@@ -66,11 +66,9 @@ async function handleChangeMarker() {
    try {
       const { lat, lng } = marker.getLatLng();
       const request = await fetch(urlGeoApify(lat, lng));
-      // const request = await fetch(urlLocationIQ(lat, lng));
       const { features } = await request.json();
       const { properties } = features[0];
-      $textAddress.textContent = properties?.formatted;
-      console.log(properties);
+      $inputDireccion.value = properties?.formatted;
    } catch (error) {
       console.error(error)
    }

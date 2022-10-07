@@ -1,14 +1,24 @@
 (function($) {
   'use strict';
-  var form = $("#example-form");
+  var form = $("#example-form-dim");
   form.children("div").steps({
     headerTag: "h3",
     bodyTag: "section",
     transitionEffect: "slideLeft",
+    labels: {
+      cancel: "Cancelar",
+      current: "current step:",
+      pagination: "Paginación",
+      finish: "Enviar",
+      next: "Siguiente",
+      previous: "Regresar",
+      loading: "Cargando..."
+    },
     onFinished: function(event, currentIndex) {
       alert("Submitted!");
     }
   });
+
   var validationForm = $("#example-validation-form");
   validationForm.val({
     errorPlacement: function errorPlacement(error, element) {

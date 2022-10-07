@@ -1,21 +1,25 @@
-.card-body.custom{
-   /* height: 500px; */
-}
 
 .custom-container{
+   height: auto;
 }
 
 .custom-container > .content{
-   max-height: 450px;
-   overflow-y: scroll;
+   height: 500px;
+   padding-bottom: 0;
+   overflow: auto;
+}
+
+.custom-container > .actions{
+   padding-top: 10px;
 }
 
 .container_map_address{
    width: 100%;
-   height: 300px;
+   height: 242px;
    background-color: #ccc;
    animation: placeholder infinite 1s ease;
 }
+
 
 @keyframes placeholder {
    0%{

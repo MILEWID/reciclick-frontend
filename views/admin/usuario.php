@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <title>Usuario Reciclick</title>
    <?php require_once "views/layout/header-admin.php" ?>
+   <link rel="stylesheet" href="<?php echo URL_BASE_APP; ?>css/admin/informacion-usuario.css">
 </head>
 
 <body>
@@ -21,6 +22,7 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
+      <script src="<?php echo URL_BASE_APP; ?>javascript/admin2/usuario.admin.js"></script>
 </body>
 
 </html>
