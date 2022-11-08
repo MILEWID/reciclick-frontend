@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/sesion.css">
@@ -29,16 +31,18 @@
                     <span>RECICLICK</span>
                 </a>
             </div>
-            <form>
+            <form action="" method="POST">
                 <div class="container input-group justify-content-center">
                     <h1 class="title-form-text">Iniciar Sesión</h1>
                     <div class="col-12 form-group">
                         <label for="exampleInputEmail1">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com"
+                            name="email">
                     </div>
                     <div class="col-12 form-group">
                         <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="ABC123">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                            placeholder="ABC123">
                     </div>
                     <div class="col-12">
                         <div class="ctn-keep-session">
@@ -48,10 +52,14 @@
                             </label>
                             <span class="text-session">Mantener sesión iniciada</span>
                         </div>
-                    </div>  
-                    <div class="ctn-btn-login">
-                        <a href="<?php echo URL_BASE_APP.'admin/dashboard'; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a>
                     </div>
+                    <div class="ctn-btn-login">
+                        <!-- <a href="<?php echo URL_BASE_APP.'admin/dashboard'; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a> -->
+                        <button type="submit" class="btn btn-success btn-login">Iniciar sesión</button>
+                    </div>
+                    <?php 
+                        LoginController::login();    
+                    ?>
             </form>
 
         </div>

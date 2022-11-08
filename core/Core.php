@@ -10,17 +10,19 @@ class Core
 
    private function init_project()
    {
+      session_start();
       require 'vendor/autoload.php';
+      $this->init_config();
       // inicializar cookies
       // inicializar valirables de sesion 
       // inicializar archivos de configuracion 
-      $this->init_config();
       // etc.
    }
 
    private function init_config()
    {
       require_once "core/config.php";
+      require_once "controllers/login.controller.php";
    }
 
    public function load_template()
