@@ -40,8 +40,7 @@
     </a>
     <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/accordions.html">Listado de
-                    Transportistas</a></li>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>admin/listado-transportista">Listado de Transportistas</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Agregar Transportista</a>
             </li>
         </ul>
