@@ -2,7 +2,7 @@
    <div class="col-12 grid-margin">
       <div class="card">
          <div class="card-body custom">
-            <h4 class="card-title">UN TITULO BONITO</h4>
+            <h4 class="card-title">INFORMACION DE LA EMPRESA </h4>
             <form id="example-form-dim" action="#">
                <div class="custom-container">
                   <h3>Datos de la empresa</h3>
@@ -39,7 +39,7 @@
                      </div>
 
                   </section>
-                  <h3>Datos del representante</h3>
+                  <h3>Datos del Productor</h3>
                   <section>
                      <div class="form-group">
                         <label>Nombre del representante</label>
@@ -52,17 +52,6 @@
                      <div class="form-group">
                         <label>Teléfono principal</label>
                         <input type="tel" class="form-control" placeholder="(+593) 987654321">
-                     </div>
-                     <div class="form-group">
-                        <label>Teléfono secundario (opcional)</label>
-                        <input type="tel" class="form-control" placeholder="(+593) 987654321">
-                     </div>
-                  </section>
-                  <h3>Otros datos</h3>
-                  <section>
-                     <div class="form-group">
-                        <label>Número de plan de contingencias (opcional)</label>
-                        <input type="text" class="form-control" placeholder="">
                      </div>
                   </section>
                </div>

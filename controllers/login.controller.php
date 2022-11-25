@@ -11,7 +11,7 @@ class LoginController{
             }else{
                 $_SESSION["rol"] = 2;
             }
-            header("Location: ".URL_BASE_APP."admin/dashboard");
+            header("Location:".URL_BASE_APP."admin/dashboard");
         }
     }
 }

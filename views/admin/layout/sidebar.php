@@ -13,7 +13,7 @@
                   <?php
                   switch ($_SESSION["rol"]) {
                      case 1:
-                        echo "Usuario administrador";
+                        echo "Empresa  Productora";
                         break;
                      case 2:
                         echo " Empresa Transportista";
@@ -28,7 +28,7 @@
       if (isset($_SESSION["rol"])) {
          switch ($_SESSION["rol"]) {
             case 1:
-               require_once("sidebar-admin.php");
+               require_once("sidebar-productor.php");
                break;
             case 2:
                require_once("sidebar-transportista.php");
