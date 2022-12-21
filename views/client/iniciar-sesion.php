@@ -11,9 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/sesion.css">
@@ -31,18 +29,16 @@
                     <span>RECICLICK</span>
                 </a>
             </div>
-            <form action="" method="POST">
+            <form action="" method="POST" id="formLogin">
                 <div class="container input-group justify-content-center">
                     <h1 class="title-form-text">Iniciar Sesión</h1>
                     <div class="col-12 form-group">
-                        <label for="exampleInputEmail1">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com"
-                            name="email">
+                        <label for="inputUser"><strong>Nombre de usuario</strong></label>
+                        <input type="text" class="form-control" id="inputUser" placeholder="JhonDoe" name="email" required>
                     </div>
                     <div class="col-12 form-group">
-                        <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
-                            placeholder="ABC123">
+                        <label for="inputPwd"><strong>Contraseña</strong></label>
+                        <input type="password" class="form-control" id="inputPwd" name="password" placeholder="******" required>
                     </div>
                     <div class="col-12">
                         <div class="ctn-keep-session">
@@ -54,17 +50,45 @@
                         </div>
                     </div>
                     <div class="ctn-btn-login">
-                        <!-- <a href="<?php echo URL_BASE_APP.'admin/dashboard'; ?>" type="submit" class="btn btn-success btn-login">Iniciar sesión</a> -->
-                        <button type="submit" class="btn btn-success btn-login">Iniciar sesión</button>
+                        <button type="submit" id="btnSubmit" class="btn btn-success btn-login">Iniciar sesión</button>
                     </div>
-                    <?php 
-                        LoginController::login();    
-                    ?>
             </form>
-
         </div>
     </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const url = "<?php echo URL_API_M1 ?>";
+        const formLogin = document.getElementById('formLogin');
+        formLogin.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            // this.btnSubmit.setAttribute('disabled', 'true')
+            const data = {
+                username: this.inputUser.value,
+                password: this.inputPwd.value
+            }
+
+            try {
+                const {
+                    data: userLogged
+                } = await axios.post(`${url}/auth/login`, data);
+
+                const {
+                    data: user
+                } = await axios.post('<?php URL_BASE_APP ?>login', userLogged);
+                console.log(user);
+            } catch (error) {
+                Swal.fire(
+                    'Credenciales incorrectas',
+                    'El usuario o la contraseña no son correctas',
+                    'error'
+                );
+                this.btnSubmit.removeAttribute('disabled')
+                this.reset();
+            }
+        });
+    </script>
 </body>
 
 </html>
