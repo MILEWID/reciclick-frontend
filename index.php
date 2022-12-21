@@ -1,7 +1,6 @@
 <?php
-require_once "./core/Core.php";
+require_once(__DIR__ . '/core/config.php');
+require_once(__DIR__ . '/core/router.php');
 
-
-$app = new Core();
-
-$app->load_template();
+$router = new Router();
+$router->run();
