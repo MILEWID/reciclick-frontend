@@ -34,7 +34,7 @@
                     <h1 class="title-form-text">Iniciar Sesión</h1>
                     <div class="col-12 form-group">
                         <label for="inputUser"><strong>Nombre de usuario</strong></label>
-                        <input type="text" class="form-control" id="inputUser" placeholder="JhonDoe" name="email" required>
+                        <input type="text" class="form-control" id="inputUser" placeholder="JhonDoe" name="username" required>
                     </div>
                     <div class="col-12 form-group">
                         <label for="inputPwd"><strong>Contraseña</strong></label>
@@ -58,12 +58,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    <!-- <script>
         const url = "<?php echo URL_API_M1 ?>";
         const formLogin = document.getElementById('formLogin');
         formLogin.addEventListener('submit', async function(e) {
             e.preventDefault();
-            // this.btnSubmit.setAttribute('disabled', 'true')
             const data = {
                 username: this.inputUser.value,
                 password: this.inputPwd.value
@@ -76,7 +75,7 @@
 
                 const {
                     data: user
-                } = await axios.post('<?php URL_BASE_APP ?>login', userLogged);
+                } = await axios.post('<?php echo URL_BASE_APP ?>login/iniciar', userLogged.data);
                 console.log(user);
             } catch (error) {
                 Swal.fire(
@@ -88,7 +87,7 @@
                 this.reset();
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
