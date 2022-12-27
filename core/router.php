@@ -13,7 +13,7 @@ class Router
     {
         $url = explode('/', trim(URL, '/'));
 
-        $this->controller = $url[0] ?? "home";
+        $this->controller = !empty($url[0]) ? str_replace('-', '', $url[0]) : "home";
         $this->method = !empty($url[1]) ? str_replace('-', '_', $url[1]) : "index";
 
         if (isset($url[0]) && !isset($url[1])) {

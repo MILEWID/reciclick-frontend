@@ -19,7 +19,7 @@
 <body>
    <nav class="navbar fixed-top navbar-expand-lg navbar-transparent">
       <div class="container-fluid">
-         <a class="navbar-brand logo-navbar" href="../php/index.php">
+         <a class="navbar-brand logo-navbar" href="<?php echo URL_BASE_APP ?>">
             <div class="logo-container">
                <img class="logo" src="img/logo.png" alt="Reciclick">
             </div>

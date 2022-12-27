@@ -11,12 +11,18 @@
                </p>
                <p class="designation">
                   <?php
-                  switch ($_SESSION["rol"]) {
+                  switch ($_SESSION["userLoggedRol"]) {
                      case 1:
-                        echo "Empresa  Productora";
+                        echo "Empresa transportista";
                         break;
                      case 2:
-                        echo " Empresa Transportista";
+                        echo "Empresa productora";
+                        break;
+                     case 3:
+                        echo "Empresa destinataria";
+                        break;
+                     case 4:
+                        echo "Transportista";
                         break;
                   }
                   ?>
@@ -25,12 +31,12 @@
          </div>
       </li>
       <?php
-      if (isset($_SESSION["rol"])) {
-         switch ($_SESSION["rol"]) {
-            case 1:
+      if (isset($_SESSION["userLoggedRol"])) {
+         switch ($_SESSION["userLoggedRol"]) {
+            case 2:
                require_once("sidebar-productor.php");
                break;
-            case 2:
+            case 1:
                require_once("sidebar-transportista.php");
                break;
          }

@@ -19,6 +19,12 @@
 </head>
 
 <body>
+    <?php
+    // echo '<pre>';
+    // echo '$_SESSION: ';
+    // var_dump($_SESSION);
+    // die;
+    ?>
     <div class="container-image">
         <div class="container-formulario justify-content-center">
             <div class="title-form">
@@ -29,7 +35,7 @@
                     <span>RECICLICK</span>
                 </a>
             </div>
-            <form action="" method="POST" id="formLogin">
+            <form action="<?php echo URL_BASE_APP ?>login/iniciar" method="POST" id="formLogin">
                 <div class="container input-group justify-content-center">
                     <h1 class="title-form-text">Iniciar Sesión</h1>
                     <div class="col-12 form-group">
@@ -40,6 +46,7 @@
                         <label for="inputPwd"><strong>Contraseña</strong></label>
                         <input type="password" class="form-control" id="inputPwd" name="password" placeholder="******" required>
                     </div>
+                    <input type="hidden" name="session_info" id="sessionInfo">
                     <div class="col-12">
                         <div class="ctn-keep-session">
                             <label class="switch">
@@ -58,7 +65,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script>
+    <script>
         const url = "<?php echo URL_API_M1 ?>";
         const formLogin = document.getElementById('formLogin');
         formLogin.addEventListener('submit', async function(e) {
@@ -72,11 +79,8 @@
                 const {
                     data: userLogged
                 } = await axios.post(`${url}/auth/login`, data);
-
-                const {
-                    data: user
-                } = await axios.post('<?php echo URL_BASE_APP ?>login/iniciar', userLogged.data);
-                console.log(user);
+                formLogin.sessionInfo.value = JSON.stringify(userLogged.data);
+                this.submit();
             } catch (error) {
                 Swal.fire(
                     'Credenciales incorrectas',
@@ -87,7 +91,21 @@
                 this.reset();
             }
         });
-    </script> -->
+    </script>
+    <?php
+    if (isset($_SESSION["message_login"])) {
+        unset($_SESSION["message_login"]);
+    ?>
+        <script>
+            Swal.fire(
+                'Credenciales incorrectas',
+                'El usuario o la contraseña no son correctas',
+                'error'
+            );
+        </script>
+    <?php
+    }
+    ?>
 </body>
 
 </html>

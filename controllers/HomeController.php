@@ -15,4 +15,9 @@ class HomeController extends ControllerBase
     {
         $this->render('client/iniciar-sesion');
     }
+    
+    public function registrarse()
+    {
+        $this->render('client/registrarse');
+    }
 }

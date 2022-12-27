@@ -7,16 +7,22 @@ class LoginController
 
     public function iniciar()
     {
-        var_dump($_POST);
-        // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //     $json = file_get_contents('php://input');
-        //     $json = json_decode($json);
-        //     $_SESSION
-        //     setcookie('jwt', $json->token, time() + (3600 * 24));
+        try {
+            if (isset($_POST["session_info"]) && $_POST["session_info"] != "") {
+                $userLogged = $_POST["session_info"];
+                $userLogged = json_decode($userLogged);
+                setcookie("jwt", $userLogged->token, 3600 * 24 * 1);
+                $_SESSION["userLoggedRol"] = $userLogged->usuario->id_tipo;
+                $_SESSION["userLoggedToken"] = $userLogged->token;
+                $_SESSION["userLogged"] = $userLogged;
+                header('location: ' . URL_BASE_APP . 'admin/dashboard');
+            }
+        } catch (\Throwable $th) {
+            $_SESSION["message_login"] = "Hubo un error, inténtalo de nuevo: " . $th->getMessage();
+        }
+    }
 
-        // } else {
-        //     echo json_encode(["status" => 400, "message" => "method not allowed"]);
-        //     http_response_code(400);
-        // }
+    private function redireccionarPorRol($rol)
+    {
     }
 }
