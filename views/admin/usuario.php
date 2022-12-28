@@ -25,7 +25,6 @@
       <script>
          axios.defaults.baseURL = "<?php echo URL_API_M1; ?>";
          axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
-           
       </script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/transportista.js"></script>
       <script src="<?php echo URL_BASE_APP; ?>javascript/admin2/usuario.admin.js"></script>

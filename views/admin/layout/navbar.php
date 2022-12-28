@@ -89,7 +89,7 @@
                   Configuracion
                </a>
                <div class="dropdown-divider"></div>
-               <a class="dropdown-item">
+               <a href="<?php echo URL_BASE_APP."/login/cerrar_session" ?>" class="dropdown-item">
                   <i class="fas fa-power-off text-primary"></i>
                   Cerrar Sesión
                </a>

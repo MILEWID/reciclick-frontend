@@ -1,22 +1,5 @@
 <?php
-$tipo = "";
-switch ($_SESSION["userLoggedRol"]) {
-    case 1:
-        $tipo = "Empresa Transportista";
-        break;
-    case 2:
-        $tipo = "Empresa Productora";
-        break;
-    case 3:
-        $tipo = "Empresa Destinataria";
-        break;
-    case 4:
-        $tipo = "Transportista";
-        break;
-}
 $usuarioBase = $_SESSION["userLogged"]->usuario;
-
-
 ?>
 
 <div class="col-md-12 grid-margin stretch-card">
@@ -47,7 +30,7 @@ $usuarioBase = $_SESSION["userLogged"]->usuario;
                     <label for="exampleInputConfirmPassword1">Rol</label>
                     <div class="row">
                         <div class="col-9">
-                            <input disabled type="text" class="form-control" id="inputNames" value="<?php echo $tipo ?>">
+                            <input disabled type="text" class="form-control" id="inputNames" value="<?php echo $_SESSION["userLoggedRolText"] ?>">
                         </div>
                     </div>
                 </div>

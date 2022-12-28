@@ -10,22 +10,7 @@
                   Bienvenido Raul
                </p>
                <p class="designation">
-                  <?php
-                  switch ($_SESSION["userLoggedRol"]) {
-                     case 1:
-                        echo "Empresa transportista";
-                        break;
-                     case 2:
-                        echo "Empresa productora";
-                        break;
-                     case 3:
-                        echo "Empresa destinataria";
-                        break;
-                     case 4:
-                        echo "Transportista";
-                        break;
-                  }
-                  ?>
+                  <?php echo $_SESSION["userLoggedRolText"] ?>
                </p>
             </div>
          </div>

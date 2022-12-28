@@ -11,6 +11,6 @@
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/misc.js"></script>
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/settings.js"></script>
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/todolist.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
 <!-- endinject -->
