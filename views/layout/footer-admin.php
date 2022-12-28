@@ -12,8 +12,5 @@
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/settings.js"></script>
 <script src="<?php echo URL_BASE_APP; ?>javascript/admin/todolist.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    axios.defaults.baseURL = "<?php echo URL_API_M1; ?>";
-    axios.defaults.headers.common['Authorization'] = "<?php echo $_SESSION["userLoggedToken"] ?>";
-</script>
+
 <!-- endinject -->

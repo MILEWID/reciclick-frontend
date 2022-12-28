@@ -11,4 +11,8 @@ class AdminController extends ControllerBase
     {
         $this->render("admin/pdf-manifiesto");
     }
+    function usuario()
+    {
+        $this->render("admin/usuario");
+    }
 }
