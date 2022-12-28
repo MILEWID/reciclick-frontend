@@ -18,20 +18,11 @@ class LoginController
                     $foto = $userLogged->usuario->foto_url;
                 }
 
-                $tipo = "";
-                switch ($_SESSION["userLoggedRol"]) {
-                    case 1:
-                        $tipo = "Empresa Transportista";
-                        break;
-                    case 2:
-                        $tipo = "Empresa Productora";
-                        break;
-                    case 3:
-                        $tipo = "Empresa Destinataria";
-                        break;
-                    case 4:
-                        $tipo = "Transportista";
-                        break;
+                $tipo = "Empresa Transportista";
+                switch ($userLogged->usuario->id_tipo) {
+                    case 2: $tipo = "Empresa Productora"; break;
+                    case 3: $tipo = "Empresa Destinataria"; break;
+                    case 4: $tipo = "Transportista"; break;
                 }
 
                 setcookie("jwt", $userLogged->token, $optCookie);
