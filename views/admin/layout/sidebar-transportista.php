@@ -5,7 +5,7 @@
     </a>
 </li>
 <li class="nav-item <?php echo $pagina == 'usuario' ? 'active' : '' ?>">
-    <a class="nav-link " href="<?php echo URL_BASE_APP; ?>empresa-transportista/usuario">
+    <a class="nav-link " href="<?php echo URL_BASE_APP; ?>admin/usuario">
         <i class="fa fa-user menu-icon"></i>
         <span class="menu-title">Tu cuenta</span>
     </a>
