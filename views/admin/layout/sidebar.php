@@ -24,6 +24,13 @@
             case 1:
                require_once("sidebar-transportista.php");
                break;
+            case 3:
+               require_once("sidebar-destinatario.php");
+               break;
+            case 4:
+               require_once("sidebar-utransportista.php");
+               break;
+               
          }
       }
       ?>
