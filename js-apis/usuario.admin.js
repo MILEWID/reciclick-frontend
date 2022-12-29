@@ -15,9 +15,14 @@ $btnChangePhoto2?.addEventListener('click', handleClickChangePhoto);
 
 $formUsuario?.addEventListener('submit', function (e) {
    e.preventDefault();
-   setTimeout(() => {
-      handleClickCancel($currentContainer, $currentButtonEdit, $currentInput);
-   }, 1200);
+   const bodyRequest = {
+      "id_usuario": this.inputIdUser.value,
+      "foto_url": "https://randomuser.me/api/portraits/women/17.jpg",
+      "identificacion": this.inputIdentificacion.value,
+      "nombre": this.inputNames.value,
+      "correo": this.inputEmail.value,
+   }
+   handleClickCancel($currentContainer, $currentButtonEdit, $currentInput);
 });
 
 $formUsuario?.addEventListener('click', function (e) {
@@ -74,3 +79,28 @@ function handleClickSave($buttonSave, $buttonCancel) {
 function handleClickChangePhoto() {
    $inputFilePhoto.click();
 }
+
+// const convertBase64 = (file) => {
+//    return new Promise((resolve, reject) => {
+//       const fileReader = new FileReader();
+//       fileReader.readAsDataURL(file);
+//       fileReader.onload = () => {
+//          resolve(fileReader.result);
+//       };
+
+//       fileReader.onerror = (error) => {
+//          reject(error);
+//       };
+//    });
+// };
+
+// const uploadImage = async (event) => {
+//    try {
+//       const input = document.getElementById("inputFilePhoto");
+//       const file = event.target.files[0];
+//       const base64 = await convertBase64(file);
+//       return base64;
+//    } catch (error) {
+//       return null;
+//    }
+// };
