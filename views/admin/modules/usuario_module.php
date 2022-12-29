@@ -13,7 +13,7 @@ $usuarioBase = $_SESSION["userLogged"]->usuario;
                         <input type="file" id="inputFilePhoto" hidden="hidden" accept="image/*">
                         <div class="container-photo-profile">
                             <div class="pictureUser">
-                                <img src="<?php echo $_SESSION["userLoggedProfile"] ?>" alt="">
+                                <img src="<?php echo $_SESSION["userLoggedProfile"] ?>" id="imageProfile" alt="">
                             </div>
                             <button class="buttonChangePicture" id="changePhotoProfile">
                                 <img src="<?php echo URL_BASE_APP; ?>img/camera.png" alt="camara icon">
@@ -38,7 +38,7 @@ $usuarioBase = $_SESSION["userLogged"]->usuario;
                     <label for="inputUserName">Username</label>
                     <div class="row">
                         <div class="col-9">
-                            <input disabled type="text" class="form-control" id="inputUserName" value="<?php echo $usuarioBase->usuario; ?> ">
+                            <input disabled type="text" class="form-control" id="inputUserName" value="<?php echo $usuarioBase->usuario; ?>">
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ $usuarioBase = $_SESSION["userLogged"]->usuario;
                     <label for="inputIdentificacion">Identificacion:</label>
                     <div class="row">
                         <div class="col-9">
-                            <input disabled type="text" class="form-control" id="inputIdentificacion" placeholder="17XXXXXXX7" value="<?php echo $usuarioBase->identificacion; ?> ">
+                            <input disabled type="text" class="form-control" id="inputIdentificacion" placeholder="17XXXXXXX7" value="<?php echo $usuarioBase->identificacion; ?>">
                         </div>
                         <div class="col-3">
                             <button type="button" data-action-button="edit" class="btn btn-primary ">editar</button>
@@ -84,12 +84,11 @@ $usuarioBase = $_SESSION["userLogged"]->usuario;
                             <input disabled type="password" class="form-control" id="inputPassword" placeholder="*******">
                         </div>
                         <div class="col-3">
-                            <button type="button" data-action-button="edit" class="btn btn-primary ">editar</button>
+                            <button type="button" data-action-button="edit" class="btn btn-primary">editar</button>
                         </div>
                     </div>
                 </div>
-
-                <input type="hidden" value="<?php echo $usuarioBase->id_tipo; ?>" id="inputIdUser">
+                <input type="hidden" value="<?php echo $usuarioBase->id_usuario; ?>" id="inputIdUser">
             </form>
         </div>
     </div>

@@ -2,26 +2,38 @@ const $formUsuario = document.querySelector("#formUsuario");
 const $btnChangePhoto1 = document.querySelector("#changePhotoProfile");
 const $btnChangePhoto2 = document.querySelector("#changePhotoProfile2");
 const $inputFilePhoto = document.querySelector("#inputFilePhoto");
+const $imageProfile = document.querySelector("#imageProfile");
 
 let $currentContainer = undefined;
 let $currentInput = undefined;
 let $currentButtonEdit = undefined;
 let $currentButtonCancel = undefined;
 let $currentButtonSave = undefined;
+let lastProfilePhoto = $imageProfile.src;
 
 $btnChangePhoto1?.addEventListener('click', handleClickChangePhoto);
 $btnChangePhoto2?.addEventListener('click', handleClickChangePhoto);
 
 
-$formUsuario?.addEventListener('submit', function (e) {
+$formUsuario?.addEventListener('submit', async function (e) {
    e.preventDefault();
+
+   const imagen = await getImageUploaded();
    const bodyRequest = {
       "id_usuario": this.inputIdUser.value,
-      "foto_url": "https://randomuser.me/api/portraits/women/17.jpg",
       "identificacion": this.inputIdentificacion.value,
       "nombre": this.inputNames.value,
       "correo": this.inputEmail.value,
    }
+   if(this.inputPassword.value != ""){
+      bodyRequest.contrasenia = this.inputPassword.value;
+   }
+
+   if (imagen) {
+      bodyRequest.foto_url = imagen;
+   }
+
+   await actualizar_perfil(bodyRequest);
    handleClickCancel($currentContainer, $currentButtonEdit, $currentInput);
 });
 
@@ -40,6 +52,15 @@ $formUsuario?.addEventListener('click', function (e) {
       handleClickSave($currentButtonSave, $currentButtonCancel);
    }
 });
+
+$inputFilePhoto.addEventListener('change', function (event) {
+   if (event.target.files.length > 0) {
+      var src = URL.createObjectURL(event.target.files[0]);
+      $imageProfile.src = src;
+   } else {
+      $imageProfile.src = lastProfilePhoto;
+   }
+})
 
 /**
  * Funcion que agrega los botones de guardar y cancelar
@@ -80,27 +101,29 @@ function handleClickChangePhoto() {
    $inputFilePhoto.click();
 }
 
-// const convertBase64 = (file) => {
-//    return new Promise((resolve, reject) => {
-//       const fileReader = new FileReader();
-//       fileReader.readAsDataURL(file);
-//       fileReader.onload = () => {
-//          resolve(fileReader.result);
-//       };
+const convertBase64 = (file) => {
+   return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+         resolve(fileReader.result);
+      };
 
-//       fileReader.onerror = (error) => {
-//          reject(error);
-//       };
-//    });
-// };
+      fileReader.onerror = (error) => {
+         reject(error);
+      };
+   });
+};
 
-// const uploadImage = async (event) => {
-//    try {
-//       const input = document.getElementById("inputFilePhoto");
-//       const file = event.target.files[0];
-//       const base64 = await convertBase64(file);
-//       return base64;
-//    } catch (error) {
-//       return null;
-//    }
-// };
+const getImageUploaded = async () => {
+   try {
+      if ($inputFilePhoto.files.length > 0) {
+         const file = $inputFilePhoto.files[0];
+         const base64 = await convertBase64(file);
+         return base64;
+      }
+      return null;
+   } catch (error) {
+      return null;
+   }
+};

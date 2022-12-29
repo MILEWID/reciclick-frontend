@@ -8,6 +8,10 @@ class LoginController
     public function iniciar()
     {
         try {
+            if ($_SERVER["REQUEST_METHOD"] == "GET") {
+                return  header('location: ' . URL_BASE_APP . 'iniciar-sesion');
+            }
+
             if (isset($_POST["session_info"]) && $_POST["session_info"] != "") {
                 $optCookie = ['expires' => time() + 60 * 60 * 24 * 1, 'path' => '/'];
                 $userLogged = $_POST["session_info"];
@@ -20,9 +24,15 @@ class LoginController
 
                 $tipo = "Empresa Transportista";
                 switch ($userLogged->usuario->id_tipo) {
-                    case 2: $tipo = "Empresa Productora"; break;
-                    case 3: $tipo = "Empresa Destinataria"; break;
-                    case 4: $tipo = "Transportista"; break;
+                    case 2:
+                        $tipo = "Empresa Productora";
+                        break;
+                    case 3:
+                        $tipo = "Empresa Destinataria";
+                        break;
+                    case 4:
+                        $tipo = "Transportista";
+                        break;
                 }
 
                 setcookie("jwt", $userLogged->token, $optCookie);
@@ -46,7 +56,7 @@ class LoginController
         $optCookie = ['expires' => time() - 60, 'path' => '/'];
         setcookie("jwt", "", $optCookie);
         session_destroy();
-        header('location: ' . URL_BASE_APP . '/iniciar-sesion');    
+        header('location: ' . URL_BASE_APP . '/iniciar-sesion');
     }
 
     private function redireccionarPorRol($rol)
