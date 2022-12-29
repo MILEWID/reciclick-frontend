@@ -18,11 +18,11 @@
       <?php
       if (isset($_SESSION["userLoggedRol"])) {
          switch ($_SESSION["userLoggedRol"]) {
-            case 2:
-               require_once("sidebar-productor.php");
-               break;
             case 1:
                require_once("sidebar-transportista.php");
+               break;
+            case 2:
+               require_once("sidebar-productor.php");
                break;
             case 3:
                require_once("sidebar-destinatario.php");
@@ -30,7 +30,6 @@
             case 4:
                require_once("sidebar-utransportista.php");
                break;
-               
          }
       }
       ?>
