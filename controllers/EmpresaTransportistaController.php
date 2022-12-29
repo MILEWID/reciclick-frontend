@@ -6,11 +6,6 @@ class EmpresaTransportistaController extends ControllerBase
     {
     }
 
-    function usuario()
-    {
-        $this->render("admin/usuario");
-    }
-
     function informacion_empresa()
     {
         $this->render("admin/informacion-empresa");
