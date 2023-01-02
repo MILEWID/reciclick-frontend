@@ -19,10 +19,11 @@
     <div class="row">
       <div class="col-12">
         <div class="table-responsive">
-          <table id="order-listing" class="table">
+          <table id="tablaAEE" class="table">
             <thead>
               <tr>
                 <th>Id AEE:</th>
+                <th>Instalacion:</th>
                 <th>Nombre:</th>
                 <th>Código: </th>
                 <th>Capacidad Contenedor:</th>
@@ -33,8 +34,8 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="tablaBodyAee">
+              <!-- <tr>
                 <td>Andres Peralta</td>
                 <td>Jefe de transportes</td>
                 <td>Camión de carga</td>
@@ -47,7 +48,7 @@
                     <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
                     <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -68,42 +69,36 @@
         </div>
         <div class="modal-body">
           <div class="table-responsive">
-            <table class="table">
+            <table class="table" id="tabla-aee">
               <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Código del desecho</th>
-                  <th>Tipo</th>
-                  <th>Capacidad</th>
-                  <th>Cantidad total del desecho</th>
-                  <th>Unidad volumen/peso</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Jacob</td>
-                  <td>53275531</td>
-                  <td>12 May 2017</td>
-                  <td>12 May 2017</td>
-                  <td>12 May 2017</td>
-                  <td><label class="badge badge-danger badge-pill">Pending</label></td>
-                </tr>
-                <tr>
-                  <td>Messsy</td>
-                  <td>53275532</td>
-                  <td>15 May 2017</td>
-                  <td>15 May 2017</td>
-                  <td>15 May 2017</td>
-                  <td><label class="badge badge-warning badge-pill">In progress</label></td>
-                </tr>
-                <tr>
-                  <td>John</td>
-                  <td>53275533</td>
-                  <td>14 May 2017</td>
-                  <td>14 May 2017</td>
-                  <td>14 May 2017</td>
-                  <td><label class="badge badge-info badge-pill">Fixed</label></td>
-                </tr>
+              <tr>
+                <th>Id AEE:</th>
+                <th>Instalacion:</th>
+                <th>Nombre:</th>
+                <th>Código: </th>
+                <th>Capacidad Contenedor:</th>
+                <th>Tipo Contenedor:</th>
+                <th>Cantidad</th>
+                <th>Unidades </th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-aee">
+              <tr>
+                <td>Andres Peralta</td>
+                <td>Jefe de transportes</td>
+                <td>Camión de carga</td>
+                <td>ABC1234</td>
+                <td>ABC123kjh4</td>
+                <td>ABC12kjh34</td>
+                <td>A234</td>
+                <td><div class="badge badge-success badge-pill">Activo</div></td>
+                <td>
+                    <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
+                    <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></button>
+                </td>
+              </tr>
               </tbody>
             </table>
           </div>
