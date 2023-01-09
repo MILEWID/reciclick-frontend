@@ -29,6 +29,7 @@
       </script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
       <script>
+         var datatable ;
          $(document).ready(function() {
             $.ajaxSetup({
                headers: {
@@ -36,7 +37,7 @@
                }
             });
 
-            $('#tablaAEE').DataTable({
+            datatable =$('#tablaAEE').DataTable({
                language: {
                   url: '<?php echo URL_BASE_APP; ?>javascript/spanish-datatale.json',
                },
@@ -93,8 +94,8 @@
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
-                    <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></button>`;
+                        return `<button type="button"  id="eliminarItem" onclick="eliminarAee(${full.id_aee})" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
+                    <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.id_aee}" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></a>`;
                      },
                   },
                   {
@@ -106,12 +107,13 @@
                         if (data == 1) {
                            return '<div class="badge badge-success badge-pill">Activo</div>';
                         }
-                        return '<div class="badge badge-success badge-pill">Activo</div>';
+                        return '<div class="badge badge-danger badge-pill">Inactivo</div>';
                      },
                   },
                ],
             });
          });
+
       </script>
 </body>
 
