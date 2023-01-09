@@ -33,3 +33,47 @@ function cuerpoAEE(aee) {
         <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></button>
     </td>`
 }
+
+const formAee = document.getElementById("formAee");
+
+
+ async function obtenerInstalaciones(){
+    const selectInstalacion = formAee.aInstalacion;
+    const fragment = document.createDocumentFragment();
+  try{
+    const { data } = await axios.get("/instalaciones")
+    data.forEach(instalacion =>{
+        const op = document.createElement("OPTION");
+        op.value = instalacion.id_instalacion;
+        op.textContent = instalacion.nombre_instalacion;
+        fragment.appendChild(op);
+    })
+    selectInstalacion.appendChild(fragment);
+  }
+  catch(error){
+    console.log(error);
+  }
+ }
+
+
+
+
+// async function agregarAee() {
+//     alert("holi");
+//     try {
+//         const tablaBodyAee = document.getElementById("tablaBodyAee");
+//         const fragment = document.createDocumentFragment()
+//         const { data } = await axios.get("/aee")
+//         data.forEach(aee => {
+//             const tr = document.createElement("TR");
+//             let cu = cuerpoAEE(aee);
+//             tr.innerHTML = cu;
+//             fragment.appendChild(tr)
+//         });
+//         tablaBodyAee.appendChild(fragment);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+obtenerInstalaciones();

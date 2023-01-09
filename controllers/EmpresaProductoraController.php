@@ -10,5 +10,9 @@ class EmpresaProductoraController extends ControllerBase
     {
         $this->render("admin/aee");
     }
+    // la ruta debe ir el nombre d ela funcion
+    function addaee(){
+        $this->render("admin/agregar-aee");
+    }
 
 }
