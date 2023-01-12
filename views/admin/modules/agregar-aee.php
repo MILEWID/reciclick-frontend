@@ -17,11 +17,11 @@
                     </div>
                     <div class="form-group">
                         <label>Capacidad del Contenedor: </label>
-                        <input type="text" class="form-control" id="aCapCon" placeholder="2">
+                        <input type="text" class="form-control" id="aCapCon" >
                     </div>
                     <div class="form-group">
                         <label>Tipo de contenedor:</label>
-                        <input type="text" class="form-control" id="aTipo" placeholder="23">
+                        <input type="text" class="form-control" id="aTipo" >
                     </div>
                 </div>
                 <div class="col-6">
@@ -34,10 +34,8 @@
                         <input type="number" class="form-control" id="aUni">
                     </div>
                     <div class="form-group">
-                        <label >Instalacion</label>
+                        <label >Instalación:</label>
                         <select class="form-control" id= "aInstalacion">
-                          <option>Male</option>
-                          <option>Female</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Agregar</button>

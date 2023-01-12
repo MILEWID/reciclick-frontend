@@ -2,7 +2,7 @@
 </div>
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title " style="text-transform: none;">Listado de AEE por Instalación</h4>
+    <h4 class="card-title " style="text-transform: none;">Listado de AEE (Aparatos Eléctrico - Electrónicos)</h4>
     <div class="row">
       <div class="col-12">
         <div class="table-responsive">

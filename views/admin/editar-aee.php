@@ -15,7 +15,7 @@
          <?php require_once "layout/sidebar.php" ?>
          <div class="main-panel">
             <div class="content-wrapper">
-               <?php require_once "modules/agregar-aee.php" ?>
+               <?php require_once "modules/editar-aee.php" ?>
             </div>
          </div>
       </div>

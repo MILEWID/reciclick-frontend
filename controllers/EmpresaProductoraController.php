@@ -15,4 +15,8 @@ class EmpresaProductoraController extends ControllerBase
         $this->render("admin/agregar-aee");
     }
 
+    function editaaee(){
+        $this->render("admin/editar-aee");
+    }
+
 }
