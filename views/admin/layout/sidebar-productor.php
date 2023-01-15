@@ -33,7 +33,7 @@
         <ul class="nav flex-column sub-menu">
             <li class="nav-item <?php echo $pagina == 'manifiesto-unico' ? 'active' : '' ?>"> <a class="nav-link"
                     href="<?php echo URL_BASE_APP; ?>admin/mostrar-manifiestos">Listado de manifiestos</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-collapsed.html">Generar Manifiesto</a>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/registrar-manifiesto">Generar Manifiesto</a>
             </li>
         </ul>
     </div>

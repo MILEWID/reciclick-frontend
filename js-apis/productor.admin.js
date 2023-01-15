@@ -1,46 +1,29 @@
-
-const formAee = document.getElementById("formAee");
-
-
+// Probado y funcionando
 async function obtenerAee() {
-    const id= formAee?.idAee.value;
+
+    const formAee = document.getElementById("formAee");
+    const id = formAee?.idAee.value;
     try {
-       const {data:[aee]} = await axios.get("/aee/campo/id_aee/"+id);
-       formAee.aName.value = aee.nombre,
-       formAee.aCod.value= aee.codigo,
-       formAee.aCapCon.value= aee.capacidad_contenedor,
-       formAee.aTipo.value= aee.tipo_contenedor,
-       formAee.aCant.value= aee.cantidad,
-       formAee.aUni.value= aee.unidades,
-       formAee.aInstalacion.value= aee.Instalacione.nombre_instalacion
+        const { data: [aee] } = await axios.get("/aee/campo/id_aee/" + id);
+        $('aInstalacion').val(aee.Instalacione.id_instalacion);
+        formAee.aName.value = aee.nombre;
+        formAee.aCod.value = aee.codigo;
+        formAee.aCapCon.value = aee.capacidad_contenedor;
+        formAee.aTipo.value = aee.tipo_contenedor;
+        formAee.aCant.value = aee.cantidad;
+        formAee.aUni.value = aee.unidades;
+        // formAee.aInstalacion.value = aee.Instalacione.nombre_instalacion;
     }
     catch (error) {
         console.log(error);
     }
 }
 
-
-async function obtenerInstalaciones() {
-    const selectInstalacion = formAee?.aInstalacion;
-    const fragment = document.createDocumentFragment();
+// Probado y funcionando
+// TODO: bloquear boton al registrar
+async function agregarAee(event) {
     try {
-        const { data } = await axios.get("/instalaciones")
-        data.forEach(instalacion => {
-            const op = document.createElement("OPTION");
-            op.value = instalacion.id_instalacion;
-            op.textContent = instalacion.nombre_instalacion;
-            fragment.appendChild(op);
-        })
-        selectInstalacion.appendChild(fragment);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-
-async function agregarAee() {
-    try {
+        event.preventDefault();
         const data = {
             nombre: formAee.aName.value,
             codigo: formAee.aCod.value,
@@ -52,7 +35,7 @@ async function agregarAee() {
             id_instalacion: formAee.aInstalacion.value,
         }
         await axios.post("/aee", data);
-         Swal.fire({
+        Swal.fire({
             icon: 'success',
             title: 'AEE Agregado',
             text: 'Los datos del AEE se actualizaron correctamente',
@@ -71,9 +54,12 @@ async function agregarAee() {
     }
 }
 
-
-async function actualizarAee(){
+// Probado y funcionaodo
+async function actualizarAee(event) {
     try {
+        event.preventDefault();
+        const formAee = document.getElementById("formAee");
+
         const data = {
             nombre: formAee.aName.value,
             codigo: formAee.aCod.value,
@@ -83,17 +69,19 @@ async function actualizarAee(){
             unidades: formAee.aUni.value,
             estado: 1,
             id_instalacion: formAee.aInstalacion.value,
+            id_aee: formAee.idAee.value
         }
         await axios.put("/aee", data);
-         Swal.fire({
+        await Swal.fire({
             icon: 'success',
             title: 'AEE Actualizado',
             text: 'Los datos del AEE se actualizaron correctamente',
             showConfirmButton: false,
             timer: 1500
         })
-        formAee.reset();
+        location.reload();
     } catch (error) {
+        console.log(error)
         Swal.fire({
             icon: 'error',
             title: 'AEE no Aactualizado',
@@ -104,15 +92,9 @@ async function actualizarAee(){
     }
 }
 
-formAee?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    agregarAee();
-});
-
-
-async function eliminarAee(id){
-    try{
-        await axios.delete('/aee/'+id)
+async function eliminarAee(id) {
+    try {
+        await axios.delete('/aee/' + id)
         await Swal.fire({
             icon: 'success',
             title: 'AEE eliminado',
@@ -122,7 +104,7 @@ async function eliminarAee(id){
         });
         location.reload();
     }
-    catch(error){
+    catch (error) {
         Swal.fire({
             icon: 'error',
             title: 'AEE no eliminado',
@@ -134,5 +116,26 @@ async function eliminarAee(id){
 
 }
 
-obtenerInstalaciones();
-obtenerAee();
+async function registrarManifiesto(event) {
+    event.preventDefault();
+    try {
+        const data = {
+            n_registro: this.numRegistro.value,
+            n_manifiesto: this.numManifiesto.value,
+            pagina: this.numPagina.value,
+            instrucciones_especiales: this.numIntrucciones.value,
+            nombre_productor: this.nombreProductor.value,
+            cargo_productor: this.cargoProductor.value,
+            correo_productor: this.correoProductor.value,
+            telefono_productor: this.telefonoProductor.value,
+            numero_resolutivo: this.numResolutivo.value,
+            fecha_salida: this.fechaSalida.value,
+            id_instalacion: this.idInstalacion.value,
+            id_edestinataria: this.idDestinatario.value,
+            id_etrasportista: this.idTransportista.value
+        }
+        // TODO: enviar peticion
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -22,20 +22,6 @@
               </tr>
             </thead>
             <tbody id="tablaBodyAee">
-              <!-- <tr>
-                <td>Andres Peralta</td>
-                <td>Jefe de transportes</td>
-                <td>Camión de carga</td>
-                <td>ABC1234</td>
-                <td>ABC123kjh4</td>
-                <td>ABC12kjh34</td>
-                <td>A234</td>
-                <td><div class="badge badge-success badge-pill">Activo</div></td>
-                <td>
-                    <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
-                    <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></button>
-                </td>
-              </tr> -->
             </tbody>
           </table>
         </div>

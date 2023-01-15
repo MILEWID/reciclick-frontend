@@ -10,12 +10,12 @@
 
 <body>
    <div class="container-scroller">
-      <?php require_once "layout/navbar.php" ?>
+      <?php require_once "views/admin/layout/navbar.php" ?>
       <div class="container-fluid page-body-wrapper">
-         <?php require_once "layout/sidebar.php" ?>
+         <?php require_once "views/admin/layout/sidebar.php" ?>
          <div class="main-panel">
             <div class="content-wrapper">
-               <?php require_once "modules/agregar-aee.php" ?>
+               <?php require_once "inc/agregar-aee.php" ?>
             </div>
          </div>
       </div>
@@ -25,7 +25,13 @@
          axios.defaults.baseURL = "<?php echo URL_API_M2;?>";
          axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"]?>";
       </script>
+      <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
+      <script>
+         obtenerInstalacionesGlobal('aInstalacion');
+         const formAee = document.getElementById("formAee");
+         formAee.addEventListener('submit', agregarAee)
+      </script>
 </body>
 
 </html>

@@ -10,12 +10,12 @@
 
 <body>
    <div class="container-scroller">
-      <?php require_once "layout/navbar.php" ?>
+      <?php require_once "views/admin/layout/navbar.php" ?>
       <div class="container-fluid page-body-wrapper">
-         <?php require_once "layout/sidebar.php" ?>
+         <?php require_once "views/admin/layout/sidebar.php" ?>
          <div class="main-panel">
             <div class="content-wrapper">
-               <?php require_once "modules/listar_aee_module.php" ?>
+               <?php require_once "inc/listar_aee_module.php" ?>
             </div>
          </div>
       </div>
@@ -23,11 +23,6 @@
       <?php require_once "views/layout/footer-admin.php" ?>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script>
-         axios.defaults.baseURL = "<?php echo URL_API_M2; ?>";
-         axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
-      </script>
-      <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
       <script>
          var datatable ;
          $(document).ready(function() {
@@ -94,8 +89,8 @@
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<button type="button"  id="eliminarItem" onclick="eliminarAee(${full.id_aee})" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-trash text-danger"></i></button>
-                    <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.id_aee}" class="btn btn-outline-secondary btn-rounded btn-icon p-0"><i class="fas fa-edit text-warning"></i></a>`;
+                        return `<button type="button"  id="eliminarItem" onclick="eliminarAee(${full.id_aee})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-trash text-danger"></i></button>
+                    <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.id_aee}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
                      },
                   },
                   {
