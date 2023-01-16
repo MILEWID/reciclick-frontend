@@ -3,7 +3,7 @@ async function obtenerInstalacionesGlobal(idSelect = '') {
     if (!selectInstalacion) return;
     const fragment = document.createDocumentFragment();
     try {
-        const { data } = await axios.get("/instalaciones")
+        const { data } = await instanceService2.get("/instalaciones")
         data.forEach(instalacion => {
             const op = document.createElement("OPTION");
             op.value = instalacion.id_instalacion;
@@ -23,7 +23,7 @@ async function obtenerDestinatarioGlobal(idSelect = '') {
     if (!selectDestinatario) return;
     const fragment = document.createDocumentFragment();
     try {
-        const { data } = await axios.get("/empresa-destinatario")
+        const { data } = await instanceService1.get("/empresa-destinatario")
         data.forEach(empresa => {
             const op = document.createElement("OPTION");
             op.value = empresa.id_edestinataria;
@@ -43,7 +43,7 @@ async function obtenerTransportistaGlobal(idSelect = '') {
     if (!selectTransportista) return;
     const fragment = document.createDocumentFragment();
     try {
-        const { data } = await axios.get("/empresa-transportista")
+        const { data } = await instanceService1.get("/empresa-transportista")
         data.forEach(empresa => {
             const op = document.createElement("OPTION");
             op.value = empresa.id_etrasportista;

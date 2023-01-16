@@ -5,7 +5,7 @@ async function obtenerAee() {
     const formAee = document.getElementById("formAee");
     const id = formAee?.idAee.value;
     try {
-        const { data: [aee] } = await axios.get("/aee/campo/id_aee/" + id);
+        const { data: [aee] } = await instanceService2.get("/aee/campo/id_aee/" + id);
         $('aInstalacion').val(aee.Instalacione.id_instalacion);
         formAee.aName.value = aee.nombre;
         formAee.aCod.value = aee.codigo;
@@ -34,7 +34,7 @@ async function agregarAee(event) {
             estado: 1,
             id_instalacion: formAee.aInstalacion.value,
         }
-        await axios.post("/aee", data);
+        await instanceService2.post("/aee", data);
         Swal.fire({
             icon: 'success',
             title: 'AEE Agregado',
@@ -71,7 +71,7 @@ async function actualizarAee(event) {
             id_instalacion: formAee.aInstalacion.value,
             id_aee: formAee.idAee.value
         }
-        await axios.put("/aee", data);
+        await instanceService2.put("/aee", data);
         await Swal.fire({
             icon: 'success',
             title: 'AEE Actualizado',
@@ -95,7 +95,7 @@ async function actualizarAee(event) {
 // Probado y funcionado
 async function eliminarAee(id) {
     try {
-        await axios.delete('/aee/' + id)
+        await instanceService2.delete('/aee/' + id)
         await Swal.fire({
             icon: 'success',
             title: 'AEE eliminado',
@@ -137,7 +137,7 @@ async function registrarManifiesto(event) {
             id_edestinataria: this.idDestinatario.value,
             id_etrasportista: this.idTransportista.value
         }
-        await axios.post("/manifiesto-p1", data);
+        await instanceService2.post("/manifiesto-p1", data);
         await Swal.fire({
             icon: 'success',
             title: 'AEE Actualizado',
@@ -156,7 +156,6 @@ async function registrarManifiesto(event) {
         })
     }
 }
-
 
 async function mostrarManifiesto(id){
 

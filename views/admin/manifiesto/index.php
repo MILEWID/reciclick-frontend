@@ -21,9 +21,8 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
-
       <script>
-         var datatable ;
+         var datatable;
          $(document).ready(function() {
             $.ajaxSetup({
                headers: {
@@ -31,7 +30,7 @@
                }
             });
 
-            datatable =$('#tablaAEE').DataTable({
+            datatable = $('#tablaAEE').DataTable({
                language: {
                   url: '<?php echo URL_BASE_APP; ?>javascript/spanish-datatale.json',
                },
@@ -72,39 +71,43 @@
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-eye text-primary"></i></a>
-                    <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.id_aee}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
+                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-eye text-primary"></i></a>
+                        <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.Manifiesto.Manifiesto_Productor.id_instalacion}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
                      },
                   },
                   {
                      targets: -2,
-                     title: 'Almacenamiento ',
+                     title: 'Almacenamiento',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        if(!data){
-                            return "Sin asignar"
+                        if (!data) {
+                           return "S/N"
+                        } else {
+                           return data.autorizacion
                         }
                      },
                   },
                   {
                      targets: -3,
-                     title: 'Transportista ',
+                     title: 'Transportista',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        if(!data){
-                            return "Sin asignar"
+                        if (!data) {
+                           return "S/N"
+                        } else {
+                           console.log(data);
                         }
                      },
                   },
                   {
                      targets: -4,
-                     title: 'Productor ',
+                     title: 'Productor',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        if(!data){
-                            return "Sin asignar"
-                        }else{
-                            return data.nombre_productor;
+                        if (!data) {
+                           return "S/N"
+                        } else {
+                           return data.nombre_productor;
                         }
                      },
                   },

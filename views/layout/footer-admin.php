@@ -22,4 +22,24 @@
         service4: "<?php echo URL_API_M4 ?>",
         token: "<?php echo $_SESSION['userLoggedToken']; ?>",
     }
+
+    const instanceService1 = axios.create({
+        baseURL: '<?php echo URL_API_M1; ?>',
+    });
+    instanceService1.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
+
+    const instanceService2 = axios.create({
+        baseURL: '<?php echo URL_API_M2; ?>',
+    });
+    instanceService2.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
+
+    const instanceService3 = axios.create({
+        baseURL: '<?php echo URL_API_M3; ?>',
+    });
+    instanceService3.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
+
+    const instanceService4 = axios.create({
+        baseURL: '<?php echo URL_API_M4; ?>',
+    });
+    instanceService4.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
 </script>

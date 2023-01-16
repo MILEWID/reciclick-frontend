@@ -21,10 +21,6 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
-      <script>
-         axios.defaults.baseURL = "<?php echo URL_API_M2;?>";
-         axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"]?>";
-      </script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
       <script>

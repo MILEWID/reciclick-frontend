@@ -22,16 +22,6 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
-      <script>
-         axios.defaults.baseURL = "<?php echo URL_API_M1; ?>";
-         axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
-      </script>
-      <!-- <script>
-
-         input.addEventListener("change", (e) => {
-            uploadImage(e);
-         });
-      </script> -->
       <script src="<?php echo URL_BASE_APP; ?>js-apis/transportista.js"></script>
       <script src="<?php echo URL_BASE_APP; ?>js-apis/usuario.admin.js"></script>
 </body>

@@ -1,16 +1,9 @@
 
-// axios.get("/empresa-transportista/id_etrasportista/1")
-// .then(function (response) {
-//   console.log("resp"+JSON.stringify(response.data));
-// })
-// .catch(function (error) {
-//   console.log(error);
-// });
 
 
 const actualizar_perfil = async (nuevoPerfil) => {
     try {
-        const { data: result } = await axios.put('/auth/actualizar-usuario-base', nuevoPerfil);
+        const { data: result } = await instanceService1.put('/auth/actualizar-usuario-base', nuevoPerfil);
         delete result.usuario.foto_url;
         Cookies.set('jwt2', JSON.stringify(result));
         await Swal.fire({
