@@ -24,7 +24,12 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <script>
-         var datatable ;
+         axios.defaults.baseURL = "<?php echo URL_API_M2; ?>";
+         axios.defaults.headers.common['Authorization'] = "Bearer <?php echo $_SESSION["userLoggedToken"] ?>";
+      </script>
+      <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
+      <script>
+         var datatable;
          $(document).ready(function() {
             $.ajaxSetup({
                headers: {
@@ -32,7 +37,7 @@
                }
             });
 
-            datatable =$('#tablaAEE').DataTable({
+            datatable = $('#tablaAEE').DataTable({
                language: {
                   url: '<?php echo URL_BASE_APP; ?>javascript/spanish-datatale.json',
                },
@@ -98,7 +103,6 @@
                      title: 'Estado',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        console.log(full);
                         if (data == 1) {
                            return '<div class="badge badge-success badge-pill">Activo</div>';
                         }
@@ -108,7 +112,6 @@
                ],
             });
          });
-
       </script>
 </body>
 

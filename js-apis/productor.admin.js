@@ -1,3 +1,4 @@
+
 // Probado y funcionando
 async function obtenerAee() {
 
@@ -92,6 +93,7 @@ async function actualizarAee(event) {
     }
 }
 
+// Probado y funcionado
 async function eliminarAee(id) {
     try {
         await axios.delete('/aee/' + id)
@@ -105,6 +107,7 @@ async function eliminarAee(id) {
         location.reload();
     }
     catch (error) {
+        console.log(error)
         Swal.fire({
             icon: 'error',
             title: 'AEE no eliminado',
@@ -116,6 +119,7 @@ async function eliminarAee(id) {
 
 }
 
+// Probado y funcionado
 async function registrarManifiesto(event) {
     event.preventDefault();
     try {
@@ -139,3 +143,5 @@ async function registrarManifiesto(event) {
         console.log(error)
     }
 }
+
+console.log(configMicroservices);
