@@ -134,8 +134,27 @@ async function registrarManifiesto(event) {
             id_edestinataria: this.idDestinatario.value,
             id_etrasportista: this.idTransportista.value
         }
-        // TODO: enviar peticion
+        await axios.post("/manifiesto-p1", data);
+        await Swal.fire({
+            icon: 'success',
+            title: 'AEE Actualizado',
+            text: 'Los datos del Manifiesto se actualizaron correctamente',
+            showConfirmButton: false,
+            timer: 1500
+        }) 
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Manifiesto  no creado ',
+            text: 'Hubo un error al crear  el Manifiesto ',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
+}
+
+
+async function mostrarManifiesto(id){
+
 }

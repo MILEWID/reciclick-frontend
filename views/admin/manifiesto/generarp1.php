@@ -29,6 +29,8 @@
         <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
         <script>
             obtenerInstalacionesGlobal('idInstalacion');
+            obtenerDestinatarioGlobal('idDestinatario');
+            obtenerTransportistaGlobal('idTransportista')
             const formManifiesto = document.getElementById("formRegistrarManifiestoP1");
             formManifiesto.addEventListener('submit', registrarManifiesto)
         </script>
