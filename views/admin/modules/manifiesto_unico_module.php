@@ -12,8 +12,8 @@
                 <th>Codigo</th>
                 <th>Empresa Generadora </th>
                 <th>RAEE a transportar </th>
-                <th>Nombre del Transportista </th>
-                <th>Empresa Destiniantaria</th>
+                <th>Transportista </th>
+                <th>Almacenamiento</th>
                 <th>Manifiesto </th>
                 <th>Acciones </th>
 

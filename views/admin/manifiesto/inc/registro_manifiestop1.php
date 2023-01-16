@@ -2,7 +2,7 @@
     <div class="card-body">
         <h4 class="card-title">Registrar manifiesto</h4>
         <p class="card-description">
-            parte uno
+            Generar Parte 1 del manifiesto de Productor
         </p>
         <form id="formRegistrarManifiestoP1">
             <div class="form-group row">
@@ -67,14 +67,14 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <label for="idDestinatario">Destinatario</label>
-                    <input type="number" class="form-control" id="idDestinatario" required>
+                    <select class="form-control" id="idDestinatario" required></select>
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-12 col-md-6">
                     <label for="idTransportista">Transportista</label>
-                    <input type="number" class="form-control" id="idTransportista" required>
+                    <select class="form-control" id="idTransportista" required></select>
                 </div>
             </div>
             <div class="text-center">

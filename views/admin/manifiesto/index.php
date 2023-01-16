@@ -72,13 +72,13 @@
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<button type="button"  id="eliminarItem" onclick="eliminarAee(${full.id_aee})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-trash text-danger"></i></button>
+                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-eye text-primary"></i></a>
                     <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.id_aee}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
                      },
                   },
                   {
                      targets: -2,
-                     title: 'Almacenamiento: ',
+                     title: 'Almacenamiento ',
                      orderable: false,
                      render: function(data, type, full, meta) {
                         if(!data){
@@ -88,7 +88,7 @@
                   },
                   {
                      targets: -3,
-                     title: 'Transportista: ',
+                     title: 'Transportista ',
                      orderable: false,
                      render: function(data, type, full, meta) {
                         if(!data){
@@ -98,7 +98,7 @@
                   },
                   {
                      targets: -4,
-                     title: 'Productor: ',
+                     title: 'Productor ',
                      orderable: false,
                      render: function(data, type, full, meta) {
                         if(!data){
