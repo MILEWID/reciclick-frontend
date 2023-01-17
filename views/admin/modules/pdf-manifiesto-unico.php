@@ -1,3 +1,38 @@
+<?php
+$id_manifiesto = $_GET['manifiesto'] ?? "-1";
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => URL_API_M3 . '/obtener-manifiesto/id/' . $id_manifiesto,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array('Authorization: Bearer ' . $_SESSION['userLoggedToken']),
+));
+
+$response = curl_exec($curl);
+curl_close($curl);
+$query = json_decode($response);
+
+if (isset($query->status) && $query->status == 404) {
+    echo "<h1>{$query->message}</h1>";
+    die;
+}
+
+$manifiesto = $query;
+$manifiestoProductor = $manifiesto->Manifiesto_Productor;
+$manifiestoDestinatario = $manifiesto->Manifiesto_Destinatario;
+$manifiestoTransportista = $manifiesto->Manifiesto_Transportistum;
+$instalacion = $manifiestoProductor->Instalacione;
+$aees = $instalacion->AEEs;
+$eProductor = $instalacion->E_Productora;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -60,10 +95,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3">Lorem, ipsum.</td>
-                    <td colspan="3">Lorem, ipsum.</td>
-                    <td colspan="3">Lorem, ipsum.</td>
-                    <td colspan="3">Lorem, ipsum.</td>
+                    <td colspan="3"><?php echo $manifiestoProductor->n_registro ?></td>
+                    <td colspan="3"><?php echo $eProductor->Usuario->licencia_ambiental ?></td>
+                    <td colspan="3"><?php echo $manifiesto->id_manifiesto ?></td>
+                    <td colspan="3"><?php echo $manifiestoProductor->pagina ?></td>
                 </tr>
                 <tr>
                     <td colspan="2">5. NOMBRE DE LA EMPRESA GENERADORA:</td>
@@ -299,84 +334,101 @@
         </table>
     </div>
 </body>
+
 </html>
 
 <style>
     * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  .header{
-     display: flex;
-     height: 90px;
-     overflow: hidden;
-     align-items: center;
-  }
-  .header .encabezado{
-     flex: 1;
-     text-align: center;
-  }
-  .header .encabezado h1{
-     font-size: 24px;
-  }
-  .header .encabezado p{
-     font-size: 16px;
-  }
-  .encabezado-2{
-     margin-top: 15px;
-  }
-  .encabezado-2 p{
-     text-align: center;
-  }
-  
-  .content-manifest{
-     /* background-color: lightblue; */
-     margin-bottom: 50px;
-  }
-  .content-manifest table{
-      width: 99%;
-      margin: auto;
-      border-collapse: collapse;
-  }
-  .content-manifest table td{
-     border: 1px solid #000;
-  }
-  td.table-vertical{
-     word-wrap: break-word;
-     text-align: center;
-     width: 10px;
-  }
-  span.check{
-     display: inline-block;
-     margin-top: 3px;
-     width: 16px;
-     height: 16px;
-     border: 1px solid #000;
-  }
-  /* utils */
-  td.border-none{
-     border: none !important;
-  }
-  .width-400{
-     width: 400px;
-  }
-  .width-350{
-     width: 350px;
-  }
-  .width-300{
-     width: 300px;
-  }
-  .width-250{
-     width: 250px;
-  }
-  .width-200{
-     width: 200px;
-  }
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .header {
+        display: flex;
+        height: 90px;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .header .encabezado {
+        flex: 1;
+        text-align: center;
+    }
+
+    .header .encabezado h1 {
+        font-size: 24px;
+    }
+
+    .header .encabezado p {
+        font-size: 16px;
+    }
+
+    .encabezado-2 {
+        margin-top: 15px;
+    }
+
+    .encabezado-2 p {
+        text-align: center;
+    }
+
+    .content-manifest {
+        /* background-color: lightblue; */
+        margin-bottom: 50px;
+    }
+
+    .content-manifest table {
+        width: 99%;
+        margin: auto;
+        border-collapse: collapse;
+    }
+
+    .content-manifest table td {
+        border: 1px solid #000;
+    }
+
+    td.table-vertical {
+        word-wrap: break-word;
+        text-align: center;
+        width: 10px;
+    }
+
+    span.check {
+        display: inline-block;
+        margin-top: 3px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #000;
+    }
+
+    /* utils */
+    td.border-none {
+        border: none !important;
+    }
+
+    .width-400 {
+        width: 400px;
+    }
+
+    .width-350 {
+        width: 350px;
+    }
+
+    .width-300 {
+        width: 300px;
+    }
+
+    .width-250 {
+        width: 250px;
+    }
+
+    .width-200 {
+        width: 200px;
+    }
 </style>

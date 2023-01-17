@@ -8,16 +8,19 @@ use Dompdf\Dompdf;
 
 ob_start();
 require_once("modules/pdf-manifiesto-unico.php");
+
 $template = ob_get_clean();
-// instantiate and use the dompdf class
-$dompdf = new Dompdf();
-$dompdf->loadHtml($template);
 
-// (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A3', 'landscape');
+echo $template;
+// // instantiate and use the dompdf class
+// $dompdf = new Dompdf();
+// $dompdf->loadHtml($template);
 
-// Render the HTML as PDF
-$dompdf->render();
+// // (Optional) Setup the paper size and orientation
+// $dompdf->setPaper('A3', 'landscape');
 
-// Output the generated PDF to Browser
-$dompdf->stream("",['Attachment' => false]);
+// // Render the HTML as PDF
+// $dompdf->render();
+
+// // Output the generated PDF to Browser
+// $dompdf->stream("",['Attachment' => false]);
