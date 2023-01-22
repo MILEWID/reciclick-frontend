@@ -120,28 +120,29 @@ async function eliminarAee(id) {
 
 // Probado y funcionado
 async function registrarManifiesto(event) {
+    const man3 =document.getElementById("addMani");
     event.preventDefault();
     try {
         const data = {
-            n_registro: this.numRegistro.value,
-            n_manifiesto: this.numManifiesto.value,
-            pagina: this.numPagina.value,
-            instrucciones_especiales: this.numIntrucciones.value,
-            nombre_productor: this.nombreProductor.value,
-            cargo_productor: this.cargoProductor.value,
-            correo_productor: this.correoProductor.value,
-            telefono_productor: this.telefonoProductor.value,
-            numero_resolutivo: this.numResolutivo.value,
-            fecha_salida: this.fechaSalida.value,
-            id_instalacion: this.idInstalacion.value,
-            id_edestinataria: this.idDestinatario.value,
-            id_etrasportista: this.idTransportista.value
+            n_registro: man3.numRegistro.value,
+            n_manifiesto: man3.numManifiesto.value,
+            pagina: 1,
+            instrucciones_especiales: man3.numIntrucciones.value,
+            nombre_productor: man3.nombreProductor.value,
+            cargo_productor: man3.cargoProductor.value,
+            correo_productor: man3.correoProductor.value,
+            telefono_productor: man3.telefonoProductor.value,
+            numero_resolutivo: man3.numResolutivo.value,
+            fecha_salida: man3.fechaSalida.value,
+            id_instalacion: man3.idInstalacion.value,
+            id_edestinataria: man3.idDestinatario.value,
+            id_etrasportista: man3.idTransportista.value
         }
         await instanceService2.post("/manifiesto-p1", data);
         await Swal.fire({
             icon: 'success',
-            title: 'AEE Actualizado',
-            text: 'Los datos del Manifiesto se actualizaron correctamente',
+            title: 'Manifiesto Creado',
+            text: 'Los datos del Manifiesto se han Creado correctamente',
             showConfirmButton: false,
             timer: 1500
         }) 

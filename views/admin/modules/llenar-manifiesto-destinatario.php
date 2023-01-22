@@ -7,21 +7,26 @@
                     <div class="custom-container">
                         <h3>Datos de la Entrega </h3>
                         <section>
-                            <div class="form-group">
-                                <label>Diferencias de Entrega</label>
-                                <select id="diferencias" type="text" class="form-control" id="diferencias">
-                                    <option value="0">Cantidad</option>
-                                    <option value="1">Tipo</option>
-                                    <option value="2">Desecho</option>
-                                    <option value="3">Rechazo Total</option>
-                                    <option value="4">Rechazo Parcial</option>
-                                </select>
+                            <div class="d-flex">
+                                <div class="form-group col-6">
+                                    <label>Id Manifiesto</label>
+                                    <input id="idManifiesto" type="text" value="<?php echo $_GET['manifiesto'] ?? "-1"; ?>" class="form-control" disabled>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label>Diferencias de Entrega</label>
+                                    <select id="diferencias" type="text" class="form-control" id="diferencias">
+                                        <option value="0">Cantidad</option>
+                                        <option value="1">Tipo</option>
+                                        <option value="2">Desecho</option>
+                                        <option value="3">Rechazo Total</option>
+                                        <option value="4">Rechazo Parcial</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Destinatario Alterno</label>
                                 <select type="text" class="form-control" id="destAlt">
                                     <option value="0"></option>
-                                    <option>dsjg</option>
                                 </select>
                                 <small>los campos de destinatario alterno no son obligatorios</small>
                             </div>
@@ -44,7 +49,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Fecha del Destinatario Alterno </label>
-                                        <input type="date" class="form-control" placeholder="" value="<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
+                                        <input type="date" class="form-control" placeholder="" value="<?php echo date('Y-m-d') ?>" id="fechaDestAlt">
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +89,7 @@
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <label>Nombre del  Responsable  </label>
+                                        <label>Nombre del Responsable </label>
                                         <input type="text" class="form-control" id="nombreEncargado">
                                     </div>
                                     <div class="form-group">

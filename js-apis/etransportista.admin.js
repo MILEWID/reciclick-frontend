@@ -10,12 +10,12 @@ async function registrarManifiestoP2(event) {
             ruta_transporte: man2.rutaTransporte.value,
             carreteras: man2.carretera.value,
             id_transportista: man2.idUsuario.value,
-            id_manifiesto: 1, 
+            id_manifiesto: man2.idManifiesto.value, 
         }
-        await instanceService2.post("/manifiesto-p2", data);
+        await instanceService3.post("/manifiesto-p2", data);
         await Swal.fire({
             icon: 'success',
-            title: 'AEE Actualizado',
+            title: 'Manifiesto Actualizado',
             text: 'Los datos del Manifiesto se actualizaron correctamente',
             showConfirmButton: false,
             timer: 1500

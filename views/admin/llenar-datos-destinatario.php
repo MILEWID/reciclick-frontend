@@ -27,34 +27,57 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
+
       <script src="<?php echo URL_BASE_APP; ?>js-apis/destinatario.admin.js"></script>
-      <script>obtenerDestinatarioAlterno("destAlt")</script>
-      <script >
 
-(function($) {
-  'use strict';
-  var form = $("#addMani");
-  form.children("div").steps({
-    headerTag: "h3",
-    bodyTag: "section",
-    transitionEffect: "slideLeft",
-    labels: {
-      cancel: "Cancelar",
-      current: "current step:",
-      pagination: "Paginación",
-      finish: "Enviar",
-      next: "Siguiente",
-      previous: "Regresar",
-      loading: "Cargando..."
-    },
-    onFinished:   function (event, currentIndex) {
-      var form = $(this);
-      // Submit form input
-      form.submit();
-    }
-  });
+      <script>
+         (function($) {
+            'use strict';
+            var form = $("#addMani");
+            form.children("div").steps({
+               headerTag: "h3",
+               bodyTag: "section",
+               transitionEffect: "slideLeft",
+               labels: {
+                  cancel: "Cancelar",
+                  current: "current step:",
+                  pagination: "Paginación",
+                  finish: "Enviar",
+                  next: "Siguiente",
+                  previous: "Regresar",
+                  loading: "Cargando..."
+               },
+               onFinished: registrarManifiestoP3,
+            });
 
-})(jQuery);
+         })(jQuery);
+      </script>
+      <script>
+         obtenerDestinatarioAlterno("destAlt")
+      </script>
+      <script>
+         const selectDest = document.getElementById("destAlt");
+         selectDest.addEventListener("change", async (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById("nombreDestAlt");
+            const tel = document.getElementById("telDestAlt");
+            const licDestAlt = document.getElementById("licDestAlt");
+            try {
+               nombre.value = "";
+               tel.value = "";
+               licDestAlt.value = "";
+               const {
+                  data
+               } = await instanceService1.get("/empresa-destinatario/campo/id_edestinataria/" + e.target.value);
+
+               nombre.value = data[0].Usuario.nombre;
+               tel.value = data[0].Usuario.telefono;
+               licDestAlt.value = data[0].Usuario.licencia_ambiental;
+               
+            } catch {
+               return;
+            }
+         });
       </script>
 </body>
 

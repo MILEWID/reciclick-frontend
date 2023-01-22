@@ -8,6 +8,9 @@
    <?php require_once "views/layout/header-admin.php" ?>
 </head>
 
+
+
+
 <body>
    <div class="container-scroller">
       <?php require_once "views/admin/layout/navbar.php" ?>
@@ -21,6 +24,9 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
+   
+      <script> let rol =  parseInt(`<?php echo$_SESSION["userLoggedRol"]?>`);
+      </script>
       <script>
          var datatable;
          $(document).ready(function() {
@@ -67,8 +73,27 @@
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-danger btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-pdf"></i></a>
-                        <a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `;        
+                        let concatenar =""; 
+                        switch (rol){
+                        case 2:{
+                           concatenar =   `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
+                           break;
+                        }
+                        case 3:{
+                           concatenar =   `<a href="<?php echo URL_BASE_APP; ?>EmpresaDestinataria/llenar_datos_destinatario/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
+                           break;
+                        }
+                        case 4:{
+                         //  concatenar =   `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
+                           break;
+                        }
+                        default:{
+                           concatenar =   `<a href="<?php echo URL_BASE_APP; ?>EmpresaTransportista/llenar_datos_transportista/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
+                           break;
+                        }
+                        }
+                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-danger btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-pdf"></i></a> ${concatenar}`
+
                      },
                   },
                   {

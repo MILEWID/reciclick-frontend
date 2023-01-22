@@ -17,7 +17,7 @@ $dompdf = new Dompdf();
 $dompdf->loadHtml($template);
 
 // (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A3', 'landscape');
+$dompdf->setPaper('A3', '');
 
 // Render the HTML as PDF
 $dompdf->render();

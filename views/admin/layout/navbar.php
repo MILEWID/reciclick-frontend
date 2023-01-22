@@ -15,10 +15,6 @@
                <img src="<?php echo $_SESSION["userLoggedProfile"] ?>" alt="profile" />
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-               <a class="dropdown-item">
-                  <i class="fas fa-cog text-primary"></i>
-                  Configuracion
-               </a>
                <div class="dropdown-divider"></div>
                <a href="<?php echo URL_BASE_APP."/login/cerrar_session" ?>" class="dropdown-item">
                   <i class="fas fa-power-off text-primary"></i>

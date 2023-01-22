@@ -7,10 +7,17 @@
                <div class="custom-container">
                   <h3>Datos del Embarque </h3>
                   <section>
-                     <div class="form-group">
+               
+                <div class="d-flex">
+                <div class="form-group col-6">
+                        <label>Id Manifiesto</label>
+                        <input id="idManifiesto" type="text" value = "<?php echo $_GET['manifiesto'] ?? "-1"; ?>"  class="form-control"  disabled>
+                     </div>
+                     <div class="form-group col-6">
                         <label>Punto de Salida</label>
                         <input id="inputDirección" type="text" class="form-control" aria-describedby="rucHelp" placeholder="Ingrese el punto de Salida del RAEE">
                      </div>
+                </div>
                      <div class="form-group">
                         <label>Punto de llegada </label>
                         <input type="text" class="form-control" id="puntoLlegada" placeholder="Ingrese el punto de llegada del RAEE">

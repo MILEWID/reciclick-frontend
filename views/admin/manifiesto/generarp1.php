@@ -21,14 +21,38 @@
         </div>
         <!-- SE CARGAN LOS SCRIPTS -->
         <?php require_once "views/layout/footer-admin.php" ?>
-        <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
         <script src="<?php echo URL_BASE_APP; ?>js-apis/productor.admin.js"></script>
+        <script>
+            (function($) {
+                'use strict';
+                var form = $("#addMani");
+                form.children("div").steps({
+                    headerTag: "h3",
+                    bodyTag: "section",
+                    transitionEffect: "slideLeft",
+                    labels: {
+                        cancel: "Cancelar",
+                        current: "current step:",
+                        pagination: "Paginación",
+                        finish: "Enviar",
+                        next: "Siguiente",
+                        previous: "Regresar",
+                        loading: "Cargando..."
+                    },
+                    onFinished: registrarManifiesto,
+                });
+
+            })(jQuery);
+        </script>
+
+
+
+        <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
+
         <script>
             obtenerInstalacionesGlobal('idInstalacion');
             obtenerDestinatarioGlobal('idDestinatario');
             obtenerTransportistaGlobal('idTransportista')
-            const formManifiesto = document.getElementById("formRegistrarManifiestoP1");
-            formManifiesto.addEventListener('submit', registrarManifiesto)
         </script>
 </body>
 

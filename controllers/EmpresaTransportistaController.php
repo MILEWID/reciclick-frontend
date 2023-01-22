@@ -25,4 +25,5 @@ class EmpresaTransportistaController extends ControllerBase
     {
         $this->render("admin/listado-transportista");
     }
+
 }
