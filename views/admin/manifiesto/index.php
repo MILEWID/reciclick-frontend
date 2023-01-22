@@ -66,7 +66,9 @@
                      className: "d-flex"
                   },
                ],
-               columnDefs: [{
+
+               columnDefs: [
+                  {
                      targets: -1,
                      title: 'Acciones',
                      orderable: false,
@@ -77,6 +79,15 @@
                   },
                   {
                      targets: -2,
+                     title: 'Documento ',
+                     orderable: false,
+                     render: function(data, type, full, meta) {
+                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn  d-flex align-items-center justify-content-center mr-2">pdf</a>
+                       `;
+                     },
+                  },
+                  {
+                     targets: -3,
                      title: 'Almacenamiento',
                      orderable: false,
                      render: function(data, type, full, meta) {
@@ -88,7 +99,7 @@
                      },
                   },
                   {
-                     targets: -3,
+                     targets: -4,
                      title: 'Transportista',
                      orderable: false,
                      render: function(data, type, full, meta) {
@@ -100,7 +111,7 @@
                      },
                   },
                   {
-                     targets: -4,
+                     targets: -5,
                      title: 'Productor',
                      orderable: false,
                      render: function(data, type, full, meta) {
@@ -108,6 +119,18 @@
                            return "S/N"
                         } else {
                            return data.nombre_productor;
+                        }
+                     },
+                  },
+                  {
+                     targets: -6,
+                     title: 'Codigo Manifiesto',
+                     orderable: true,
+                     render: function(data, type, full, meta) {
+                        if (!full) {
+                           return "S/N"
+                        } else {
+                           return full.id_manifiesto;
                         }
                      },
                   },

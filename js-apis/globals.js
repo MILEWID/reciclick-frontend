@@ -57,3 +57,27 @@ async function obtenerTransportistaGlobal(idSelect = '') {
         console.log(error);
     }
 }
+
+
+async function obtenerTransportistasUsuarios(idSelect = '') {
+    const selectTransportista = document.getElementById(idSelect);
+    if (!selectTransportista) return;
+    const fragment = document.createDocumentFragment();
+    try {
+        const { data } = await instanceService3.get("/usuario-transportista")
+        data.forEach(trans => {
+            const op = document.createElement("OPTION");
+            op.value = trans.id_trasportista;
+            op.textContent = trans.Usuario.nombre;
+            fragment.appendChild(op);
+        })
+        selectTransportista.appendChild(fragment);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+

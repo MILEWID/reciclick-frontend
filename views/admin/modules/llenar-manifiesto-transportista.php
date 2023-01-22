@@ -2,19 +2,18 @@
    <div class="col-12 grid-margin">
       <div class="card">
          <div class="card-body custom">
-            <h4 class="card-title">GENERAR DATOS PARA EL MANIFIESTO </h4>
+            <h4 class="card-title">GENERAR DATOS PARA EL MANIFIESTO PARTE DEL TRANSPORTISTA</h4>
             <form id="example-form-dim" action="#">
                <div class="custom-container">
                   <h3>Datos del Embarque </h3>
                   <section>
                      <div class="form-group">
                         <label>Punto de Salida</label>
-                        <input type="text" class="form-control" aria-describedby="rucHelp" placeholder="Ingrese el punto de Salida del RAEE">
-                        <small id="rucHelp" class="form-text text-muted">Este va a ser un texto de ayuda</small>
+                        <input id="inputDirección" type="text" class="form-control" aria-describedby="rucHelp" placeholder="Ingrese el punto de Salida del RAEE">
                      </div>
                      <div class="form-group">
                         <label>Punto de llegada </label>
-                        <input type="text" class="form-control" placeholder="Ingrese el punto de llegada del RAEE">
+                        <input type="text" class="form-control"  id="puntoLlegada" placeholder="Ingrese el punto de llegada del RAEE">
                      </div>
                      <div class="row px-2 mb-1">
                         <div class="col-12 col-md-6">
@@ -24,38 +23,42 @@
                         <div class="col-12 col-md-6">
                            <div class="form-group">
                               <label>Autorizacion </label>
-                              <input type="text" class="form-control" id="inputDirección" placeholder="">
+                              <input type="text" class="form-control" id="autorizacion" placeholder="">
                            </div>
                            <div class="form-group">
                               <label>Fecha Embarque </label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input type="text" class="form-control" placeholder="" id="fechaEmbarque">
                            </div>
                            <div class="form-group">
                               <label>Ruta de transporte</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input type="text" class="form-control" placeholder="" id="rutaTransporte">
                            </div>
                            <div class="form-group">
                               <label>Carretera</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input type="text" class="form-control" placeholder="" id="carretera">
                            </div>
                            <p class="text-address"></p>
                         </div>
                      </div>
 
                   </section>
-                  <h3>Datos del Productor</h3>
+                  <h3>Datos de la Empresa </h3>
                   <section>
                      <div class="form-group">
-                        <label>Nombre del representante</label>
-                        <input type="text" class="form-control" placeholder="Jhon Doe">
+                        <label>Usuario Transportista Representante </label>
+                        <select class="form-control" id="idUsuario" required></select>
                      </div>
                      <div class="form-group">
-                        <label>Cargo</label>
-                        <input type="text" class="form-control" placeholder="Transportista">
+                        <label>Nombre Empresa Tranportista </label>
+                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->nombre ?>" disabled>
                      </div>
                      <div class="form-group">
-                        <label>Teléfono principal</label>
-                        <input type="tel" class="form-control" placeholder="(+593) 987654321">
+                        <label>Dirección  </label>
+                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->domicilio ?>" id="direccion" disabled>
+                     </div>
+                     <div class="form-group">
+                        <label>Telefono </label>
+                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->telefono ?>" id="telefono" disabled>
                      </div>
                   </section>
                </div>

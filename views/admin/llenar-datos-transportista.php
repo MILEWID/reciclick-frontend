@@ -29,6 +29,11 @@
       <?php require_once "views/layout/footer-admin.php" ?>
       <script src="<?php echo URL_BASE_APP; ?>javascript/admin/wizard.js"></script>
       <script src="<?php echo URL_BASE_APP; ?>javascript/maps.address.admin.js"></script>
+
+      <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
+        <script>
+            obtenerTransportistasUsuarios('idUsuario');
+        </script>
 </body>
 
 </html>
