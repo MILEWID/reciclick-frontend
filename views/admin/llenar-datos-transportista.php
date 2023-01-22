@@ -27,13 +27,37 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
-      <script src="<?php echo URL_BASE_APP; ?>javascript/admin/wizard.js"></script>
+      <script src="<?php echo URL_BASE_APP; ?>js-apis/etransportista.admin.js"></script>
+      <script >
+
+(function($) {
+  'use strict';
+  var form = $("#addMani");
+  form.children("div").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    labels: {
+      cancel: "Cancelar",
+      current: "current step:",
+      pagination: "Paginación",
+      finish: "Enviar",
+      next: "Siguiente",
+      previous: "Regresar",
+      loading: "Cargando..."
+    },
+    onFinished: registrarManifiestoP2,
+  });
+
+})(jQuery);
+      </script>
       <script src="<?php echo URL_BASE_APP; ?>javascript/maps.address.admin.js"></script>
 
       <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
-        <script>
-            obtenerTransportistasUsuarios('idUsuario');
-        </script>
+      <script>
+         obtenerTransportistasUsuarios('idUsuario');
+
+      </script>
 </body>
 
 </html>

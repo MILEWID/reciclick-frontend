@@ -3,7 +3,7 @@
       <div class="card">
          <div class="card-body custom">
             <h4 class="card-title">GENERAR DATOS PARA EL MANIFIESTO PARTE DEL TRANSPORTISTA</h4>
-            <form id="example-form-dim" action="#">
+            <form id="addMani" action="#">
                <div class="custom-container">
                   <h3>Datos del Embarque </h3>
                   <section>
@@ -27,8 +27,8 @@
                            </div>
                            <div class="form-group">
                               <label>Fecha Embarque </label>
-                              <input type="text" class="form-control" placeholder="" id="fechaEmbarque">
-                           </div>
+                              <input type="date" class="form-control" placeholder="" value= "<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
+                           </div> 
                            <div class="form-group">
                               <label>Ruta de transporte</label>
                               <input type="text" class="form-control" placeholder="" id="rutaTransporte">
