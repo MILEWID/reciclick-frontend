@@ -13,7 +13,7 @@
                      </div>
                      <div class="form-group">
                         <label>Punto de llegada </label>
-                        <input type="text" class="form-control"  id="puntoLlegada" placeholder="Ingrese el punto de llegada del RAEE">
+                        <input type="text" class="form-control" id="puntoLlegada" placeholder="Ingrese el punto de llegada del RAEE">
                      </div>
                      <div class="row px-2 mb-1">
                         <div class="col-12 col-md-6">
@@ -27,8 +27,8 @@
                            </div>
                            <div class="form-group">
                               <label>Fecha Embarque </label>
-                              <input type="date" class="form-control" placeholder="" value= "<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
-                           </div> 
+                              <input type="date" class="form-control" placeholder="" value="<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
+                           </div>
                            <div class="form-group">
                               <label>Ruta de transporte</label>
                               <input type="text" class="form-control" placeholder="" id="rutaTransporte">
@@ -53,12 +53,16 @@
                         <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->nombre ?>" disabled>
                      </div>
                      <div class="form-group">
-                        <label>Dirección  </label>
+                        <label>Dirección </label>
                         <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->domicilio ?>" id="direccion" disabled>
                      </div>
                      <div class="form-group">
                         <label>Telefono </label>
                         <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->telefono ?>" id="telefono" disabled>
+                     </div>
+                     <div class="form-group">
+                        <label>Licencia Ambienta</label>
+                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->licencia_ambiental ?>" id="telefono" disabled>
                      </div>
                   </section>
                </div>
