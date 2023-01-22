@@ -7,7 +7,11 @@
                     <table id="tablaAEE" class="table">
                         <thead>
                             <tr>
-
+                                <td class="text-center">Número de <br> manifiesto</td>
+                                <td>Número de manifiesto</td>
+                                <td>Número de manifiesto</td>
+                                <td>Número de manifiesto</td>
+                                <td>Número de manifiesto</td>
                             </tr>
                         </thead>
                         <tbody id="tablaBodyAee">
