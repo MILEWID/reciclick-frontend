@@ -8,59 +8,100 @@
                         <h3>Datos de la Entrega </h3>
                         <section>
                             <div class="form-group">
-                                <label>Punto de Salida</label>
-                                <input id="inputDirección" type="text" class="form-control" aria-describedby="rucHelp" placeholder="Ingrese el punto de Salida del RAEE">
+                                <label>Diferencias de Entrega</label>
+                                <select id="diferencias" type="text" class="form-control" id="diferencias">
+                                    <option value="0">Cantidad</option>
+                                    <option value="1">Tipo</option>
+                                    <option value="2">Desecho</option>
+                                    <option value="3">Rechazo Total</option>
+                                    <option value="4">Rechazo Parcial</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label>Punto de llegada </label>
-                                <input type="text" class="form-control" id="puntoLlegada" placeholder="Ingrese el punto de llegada del RAEE">
+                                <label>Destinatario Alterno</label>
+                                <select type="text" class="form-control" id="destAlt">
+                                    <option value="0"></option>
+                                    <option>dsjg</option>
+                                </select>
+                                <small>los campos de destinatario alterno no son obligatorios</small>
                             </div>
                             <div class="row px-2 mb-1">
                                 <div class="col-12 col-md-6">
-                                    <div class="container_map_address" id="myMaps">
+                                    <div class="form-group">
+                                        <label>Nombre del destinatario Alterno </label>
+                                        <input type="text" class="form-control" id="nombreDestAlt" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Telefono del destinatario alterno </label>
+                                        <input type="text" class="form-control" placeholder="" id="telDestAlt" disabled>
+                                    </div>
+                                    <p class="text-address"></p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Nro Licencia destinatario Alterno </label>
+                                        <input type="text" class="form-control" id="licDestAlt" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fecha del Destinatario Alterno </label>
+                                        <input type="date" class="form-control" placeholder="" value="<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Manejo que se le dará al resíduo </label>
+                                <select class="form-control" id="manejo">
+                                    <option value="0">Rehuso/Reciclaje</option>
+                                    <option value="1">Tratamiento</option>
+                                    <option value="2">Coprocesamiento</option>
+                                    <option value="3">Incineración</option>
+                                    <option value="4">Rrelleno de seguridad</option>
+                                    <option value="5">Otros</option>
+                                </select>
+                            </div>
+
+                        </section>
+                        <h3>Datos de la Entrega Parte 2 </h3>
+                        <section>
+                            <div class="row px-2 mb-1">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Nombre Empresa Destinataria </label>
+                                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->nombre ?>" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Dirección Empresa Destinataria</label>
+                                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->domicilio ?>" id="direccion" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Telefono Empresa Destinataria </label>
+                                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->telefono ?>" id="telefono" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Licencia Ambiental</label>
+                                        <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->licencia_ambiental ?>" id="telefono" disabled>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <label>Autorizacion </label>
-                                        <input type="text" class="form-control" id="autorizacion" placeholder="">
+                                        <label>Nombre del  Responsable  </label>
+                                        <input type="text" class="form-control" id="nombreEncargado">
                                     </div>
                                     <div class="form-group">
-                                        <label>Fecha Embarque </label>
-                                        <input type="date" class="form-control" placeholder="" value="<?php echo date('Y-m-d') ?>" id="fechaEmbarque">
+                                        <label>Fecha</label>
+                                        <input type="date" class="form-control" value="<?php echo date('Y-m-d') ?>" id="fechaEncargado">
                                     </div>
                                     <div class="form-group">
-                                        <label>Ruta de transporte</label>
-                                        <input type="text" class="form-control" placeholder="" id="rutaTransporte">
+                                        <label>Cargo del Responsable</label>
+                                        <input type="text" class="form-control" id="cargoEncargado">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Carretera</label>
-                                        <input type="text" class="form-control" placeholder="" id="carretera">
-                                    </div>
-                                    <p class="text-address"></p>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label>Observaciones </label>
+                                <textarea type="text" class="form-control" id="observa"></textarea>
+                            </div>
 
-                        </section>
-                        <h3>Datos de la Empresa </h3>
-                        <section>
-                            <div class="form-group">
-                                <label>Nombre Empresa Destinataria </label>
-                                <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->nombre ?>" disabled>
-                            </div>
-                            <div class="form-group">
-                                <label>Dirección </label>
-                                <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->domicilio ?>" id="direccion" disabled>
-                            </div>
-                            <div class="form-group">
-                                <label>Telefono </label>
-                                <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->telefono ?>" id="telefono" disabled>
-                            </div>
-                            <pre>
-                                <?php
-                                var_dump($_SESSION["userLogged"]->usuario);
-                                ?>
-                            </pre>
                         </section>
                     </div>
                 </form>

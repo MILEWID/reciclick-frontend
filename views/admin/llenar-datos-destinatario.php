@@ -27,7 +27,8 @@
       </div>
       <!-- SE CARGAN LOS SCRIPTS -->
       <?php require_once "views/layout/footer-admin.php" ?>
-      <script src="<?php echo URL_BASE_APP; ?>js-apis/etransportista.admin.js"></script>
+      <script src="<?php echo URL_BASE_APP; ?>js-apis/destinatario.admin.js"></script>
+      <script>obtenerDestinatarioAlterno("destAlt")</script>
       <script >
 
 (function($) {
@@ -46,14 +47,15 @@
       previous: "Regresar",
       loading: "Cargando..."
     },
-    onFinished: registrarManifiestoP2,
+    onFinished:   function (event, currentIndex) {
+      var form = $(this);
+      // Submit form input
+      form.submit();
+    }
   });
 
 })(jQuery);
       </script>
-      <script src="<?php echo URL_BASE_APP; ?>javascript/maps.address.admin.js"></script>
-
-      <script src="<?php echo URL_BASE_APP; ?>js-apis/globals.js"></script>
 </body>
 
 </html>

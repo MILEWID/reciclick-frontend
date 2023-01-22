@@ -25,8 +25,8 @@
     </a>
     <div class="collapse" id="sidebar-layouts">
         <ul class="nav flex-column sub-menu">
-            <li class="nav-item <?php echo $pagina == 'manifiesto-unico' ? 'active' : '' ?>"> <a class="nav-link"
-                    href="<?php echo URL_BASE_APP; ?>empresa-transportista/mostrar-manifiestos">Listado de manifiestos</a></li>
+        <li class="nav-item <?php echo $pagina == 'manifiesto-unico' ? 'active' : '' ?>"> <a class="nav-link"
+                    href="<?php echo URL_BASE_APP; ?>admin/mostrar-manifiestos">Listado de manifiestos</a></li>
             <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-transportista/llenar-datos-transportista">Generar Manifiesto</a>
             </li>
         </ul>

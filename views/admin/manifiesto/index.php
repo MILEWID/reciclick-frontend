@@ -68,9 +68,7 @@
                      orderable: false,
                      render: function(data, type, full, meta) {
                         return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-danger btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-pdf"></i></a>
-
-                        <a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-success btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-excel"></i></a>
-                        `;
+                        <a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `;        
                      },
                   },
                   {
