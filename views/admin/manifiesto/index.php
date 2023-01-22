@@ -41,24 +41,19 @@
                columns: [{
                      name: 'id_manifiesto',
                      data: 'id_manifiesto',
-                     visible: false,
-                     searchable: false,
+                     class: 'text-center'
                   },
                   {
-                     name: 'fase',
-                     data: 'Manifiesto.fase'
+                     name: 'Manifiesto.id_manifiesto_productor',
+                     data: 'Manifiesto.usuarios'
                   },
                   {
-                     name: 'id_manifiesto_productor',
-                     data: 'Manifiesto.Manifiesto_Productor'
+                     name: 'Manifiesto.id_manifiesto_transportista',
+                     data: 'Manifiesto.usuarios'
                   },
                   {
-                     name: 'id_manifiesto_transportista',
-                     data: 'Manifiesto.Manifiesto_Destinatario'
-                  },
-                  {
-                     name: 'id_manifiesto_destinatario',
-                     data: 'Manifiesto.Manifiesto_Transportistum'
+                     name: 'Manifiesto.id_manifiesto_destinatario',
+                     data: 'Manifiesto.usuarios'
                   },
                   {
                      name: 'Acciones',
@@ -67,71 +62,39 @@
                   },
                ],
 
-               columnDefs: [
-                  {
+               columnDefs: [{
                      targets: -1,
                      title: 'Acciones',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-eye text-primary"></i></a>
-                        <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editaaee/?id=${full.Manifiesto.Manifiesto_Productor.id_instalacion}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
+                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-danger btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-pdf"></i></a>
+
+                        <a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-success btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-file-excel"></i></a>
+                        `;
                      },
                   },
                   {
                      targets: -2,
-                     title: 'Documento ',
+                     title: 'Empresa Destinatario',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        return `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto?p=jajaja&al=bwlksdn" type="button"  onclick="mostrarManifiesto(${full.id_manifiesto})" class="btn  d-flex align-items-center justify-content-center mr-2">pdf</a>
-                       `;
+                        return data[1]?.Usuario?.nombre || "S/N";
                      },
                   },
                   {
                      targets: -3,
-                     title: 'Almacenamiento',
+                     title: 'Empresa Transportista',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        if (!data) {
-                           return "S/N"
-                        } else {
-                           return data.autorizacion
-                        }
+                        return data[2]?.Usuario?.nombre || "S/N";
                      },
                   },
                   {
                      targets: -4,
-                     title: 'Transportista',
+                     title: 'Empresa Productora',
                      orderable: false,
                      render: function(data, type, full, meta) {
-                        if (!data) {
-                           return "S/N"
-                        } else {
-                           console.log(data);
-                        }
-                     },
-                  },
-                  {
-                     targets: -5,
-                     title: 'Productor',
-                     orderable: false,
-                     render: function(data, type, full, meta) {
-                        if (!data) {
-                           return "S/N"
-                        } else {
-                           return data.nombre_productor;
-                        }
-                     },
-                  },
-                  {
-                     targets: -6,
-                     title: 'Codigo Manifiesto',
-                     orderable: true,
-                     render: function(data, type, full, meta) {
-                        if (!full) {
-                           return "S/N"
-                        } else {
-                           return full.id_manifiesto;
-                        }
+                        return data[0]?.Usuario?.nombre || "S/N";
                      },
                   },
                ],
