@@ -26,6 +26,7 @@
       <?php require_once "views/layout/footer-admin.php" ?>
    
       <script> let rol =  parseInt(`<?php echo$_SESSION["userLoggedRol"]?>`);
+      console.log(rol);
       </script>
       <script>
          var datatable;
@@ -87,7 +88,7 @@
                          //  concatenar =   `<a href="<?php echo URL_BASE_APP; ?>admin/pdf-manifiesto/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
                            break;
                         }
-                        default:{
+                        case 1 :{
                            concatenar =   `<a href="<?php echo URL_BASE_APP; ?>EmpresaTransportista/llenar_datos_transportista/?manifiesto=${full.id_manifiesto}" target="_blank" class="btn btn-outline-warning btn-rounded btn-icon d-flex align-items-center justify-content-center mr-2"><i class="fas fa-pen"></i></a> `
                            break;
                         }
