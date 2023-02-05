@@ -68,7 +68,7 @@
                         <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->telefono ?>" id="telefono" disabled>
                      </div>
                      <div class="form-group">
-                        <label>Licencia Ambienta</label>
+                        <label>Licencia Ambiental</label>
                         <input type="text" class="form-control" value="<?php echo $_SESSION["userLogged"]->usuario->licencia_ambiental ?>" id="telefono" disabled>
                      </div>
                   </section>

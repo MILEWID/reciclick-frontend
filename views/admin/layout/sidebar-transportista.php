@@ -10,12 +10,12 @@
         <span class="menu-title">Tu cuenta</span>
     </a>
 </li>
-<li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
+<!-- <li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
     <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-transportista/informacion-empresa">
         <i class="fa fa-building menu-icon"></i>
         <span class="menu-title">Datos de la Empresa</span>
     </a>
-</li>
+</li> -->
 <li class="nav-item d-none d-lg-block">
     <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false"
         aria-controls="sidebar-layouts">
@@ -38,8 +38,8 @@
     </a>
     <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-transportista/listado-transportista">Listado de Transportistas</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Agregar Transportista</a>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-transportista/trans">Listado de Transportistas</a></li>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-transportista/addtrans">Agregar Transportista</a>
             </li>
         </ul>
     </div>

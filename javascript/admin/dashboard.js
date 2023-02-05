@@ -142,7 +142,7 @@
         type: 'pie',
         data: {
           datasets: [{
-            data: [75, 25, 15, 10],
+            data: [25, 25, 25, 25],
             backgroundColor: [
               '#392c70',
               '#04b76b',
@@ -195,7 +195,7 @@
     if ($("#daily-sales-chart").length) {
       var dailySalesChartData = {
         datasets: [{
-          data: [50, 10, 10, 30],
+          data: [25, 25, 25, 25],
           backgroundColor: [
             '#392c70',
             '#04b76b',
@@ -207,7 +207,7 @@
     
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-          'Mail order sales',
+          'BBy',
           'Instore sales',
           'Download sales',
           'Sales return'

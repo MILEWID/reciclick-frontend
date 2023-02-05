@@ -21,9 +21,17 @@ class EmpresaTransportistaController extends ControllerBase
         $this->render("admin/llenar-datos-transportista");
     }
     
-    function listado_transportista()
+    function trans()
     {
-        $this->render("admin/listado-transportista");
+        $this->render("admin/usuario-trans/trans");
+    }
+
+    function addtrans(){
+        $this->render("admin/usuario-trans/agregar-trans");
+    }
+
+    function editatrans(){
+        $this->render("admin/usuario-trans/editar-trans");
     }
 
 }

@@ -9,10 +9,10 @@
          <div class="card-body d-flex flex-column">
             <h4 class="card-title">
                <i class="fas fa-chart-pie"></i>
-               Tipos de RAEE transportados
+               Manifiestos generados
             </h4>
             <div class="flex-grow-1 d-flex flex-column justify-content-between">
-               <canvas id="sales-status-chart" class="mt-3"></canvas>
+               <div id="chart" class="mt-3"></div>
                <div class="pt-4">
                   <div id="sales-status-chart-legend" class="sales-status-chart-legend"></div>
                </div>
@@ -28,7 +28,7 @@
                Sales
             </h4>
             <h2 class="mb-5">24000 <span class="text-muted h4 font-weight-normal">Toneladas RAEE</span></h2>
-            <canvas id="sales-chart"></canvas>
+            <div id="chart2" class="mt-3"></div>
          </div>
       </div>
    </div>
