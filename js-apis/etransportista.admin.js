@@ -88,8 +88,6 @@ async function obtenerUsuarioTransportista(id) {
             return location.href = btnCancelar.dataset.urlHome
         }
 
-        console.log(usuario);
-
         form.usuario.value = usuario.Usuario.usuario;
         form.password.placeholder = "***************";
         form.identificacion.value = usuario.Usuario.identificacion;
@@ -132,7 +130,7 @@ async function actualizarUsuarioTransportista(form) {
         });
 
         const btnCancelar = document.getElementById("btnCancelar");
-        // return location.href = btnCancelar.dataset.urlHome;
+        return location.href = btnCancelar.dataset.urlHome;
 
     } catch (error) {
         console.log(error);

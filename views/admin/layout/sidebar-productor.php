@@ -10,12 +10,12 @@
         <span class="menu-title">Tu cuenta </span>
     </a>
 </li>
-<li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
+<!-- <li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
     <a class="nav-link" href="<?php echo URL_BASE_APP; ?>admin/informacion-empresa">
         <i class="fa fa-building menu-icon"></i>
         <span class="menu-title">Datos Empresa</span>
     </a>
-</li>
+</li> -->
 <li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
     <a class="nav-link" href="<?php echo URL_BASE_APP; ?>admin/instalacion-empresa">
         <i class="fa fa-industry menu-icon"></i>
