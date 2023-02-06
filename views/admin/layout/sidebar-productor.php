@@ -16,23 +16,29 @@
         <span class="menu-title">Datos Empresa</span>
     </a>
 </li> -->
-<li class="nav-item <?php echo $pagina == 'datos-empresa' ? 'active' : '' ?>">
-    <a class="nav-link" href="<?php echo URL_BASE_APP; ?>admin/instalacion-empresa">
-        <i class="fa fa-industry menu-icon"></i>
+<li class="nav-item">
+    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <i class="fas fa-building menu-icon"></i>
         <span class="menu-title">Instalaciones</span>
+        <i class="menu-arrow"></i>
     </a>
+    <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/listado-instalaciones">Listado de instalaciones</a></li>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/registrar-instalacion">Agregar instalación</a>
+            </li>
+        </ul>
+    </div>
 </li>
 <li class="nav-item d-none d-lg-block">
-    <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false"
-        aria-controls="sidebar-layouts">
+    <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
         <i class="fas fa-clipboard-list menu-icon"></i>
         <span class="menu-title">Manifiesto</span>
         <i class="menu-arrow"></i>
     </a>
     <div class="collapse" id="sidebar-layouts">
         <ul class="nav flex-column sub-menu">
-            <li class="nav-item <?php echo $pagina == 'manifiesto-unico' ? 'active' : '' ?>"> <a class="nav-link"
-                    href="<?php echo URL_BASE_APP; ?>admin/mostrar-manifiestos">Listado de manifiestos</a></li>
+            <li class="nav-item <?php echo $pagina == 'manifiesto-unico' ? 'active' : '' ?>"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>admin/mostrar-manifiestos">Listado de manifiestos</a></li>
             <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/registrar-manifiesto">Generar Manifiesto</a>
             </li>
         </ul>
@@ -40,15 +46,15 @@
 </li>
 <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <i class="far fa-user menu-icon"></i>
+        <i class="fas fa-cubes menu-icon"></i>
         <span class="menu-title">AEE</span>
         <i class="menu-arrow"></i>
     </a>
     <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link"  href="<?php echo URL_BASE_APP; ?>empresa-productora/aee">Listado de
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/aee">Listado de
                     AEE</a></li>
-            <li class="nav-item"> <a class="nav-link"  href="<?php echo URL_BASE_APP; ?>empresa-productora/addaee">Agregar AEE</a>
+            <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/addaee">Agregar AEE</a>
             </li>
         </ul>
     </div>

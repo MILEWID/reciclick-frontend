@@ -23,4 +23,16 @@ class EmpresaProductoraController extends ControllerBase
         $this->render('admin/manifiesto/generarp1');
     }
 
+    function listado_instalaciones(){
+        $this->render('admin/instalacion/index');
+    }
+    
+    function registrar_instalacion(){
+        $this->render('admin/instalacion/agregar');
+    }
+
+    function editar_instalacion(){
+        $this->render('admin/instalacion/editar');
+    }
+
 }
