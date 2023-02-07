@@ -17,12 +17,12 @@
     </a>
 </li> -->
 <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+    <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic2">
         <i class="fas fa-building menu-icon"></i>
         <span class="menu-title">Instalaciones</span>
         <i class="menu-arrow"></i>
     </a>
-    <div class="collapse" id="ui-basic">
+    <div class="collapse" id="ui-basic2">
         <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/listado-instalaciones">Listado de instalaciones</a></li>
             <li class="nav-item"> <a class="nav-link" href="<?php echo URL_BASE_APP; ?>empresa-productora/registrar-instalacion">Agregar instalación</a>

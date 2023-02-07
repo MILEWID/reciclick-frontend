@@ -50,7 +50,7 @@
         </div>
         <!-- SE CARGAN LOS SCRIPTS -->
         <?php require_once "views/layout/footer-admin.php" ?>
-        <script src="<?php echo URL_BASE_APP; ?>js-apis/etransportista.admin.js"></script>
+        <script src="<?php echo URL_BASE_APP; ?>js-apis/instalaciones.admin.js"></script>
         <script>
             var datatable;
             $(document).ready(function() {
@@ -118,9 +118,7 @@
                             title: 'Acciones',
                             orderable: false,
                             render: function(data, type, full, meta) {
-                                // TODO: realializar eliminar
-                                // <button type="button"  id="eliminarItem" onclick="eliminarUsuarioTransportista(${full.id_instalacion})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-trash text-danger"></i></button>
-                                return `
+                                return `<button type="button" onclick="eliminarInstalacion(${full.id_instalacion})" class="btn btn-outline-secondary btn-rounded btn-icon p-0 mr-2"><i class="fas fa-trash text-danger"></i></button>
                                 <a href="<?php echo URL_BASE_APP; ?>empresa-productora/editar-instalacion/?id=${full.id_instalacion}" class="btn btn-outline-secondary btn-rounded btn-icon d-flex align-items-center justify-content-center"><i class="fas fa-edit text-warning"></i></a>`;
                             },
                         },

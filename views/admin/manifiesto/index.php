@@ -42,7 +42,7 @@
                   url: '<?php echo URL_BASE_APP; ?>javascript/spanish-datatale.json',
                },
                ajax: {
-                  url: '<?php echo URL_API_M2; ?>/obtener-manifiesto',
+                  url: '<?php echo URL_API_M3; ?>/obtener-manifiesto',
                   dataSrc: ''
                },
                columns: [{

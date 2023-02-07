@@ -101,3 +101,22 @@ async function actualizarInstalacion(form) {
         });
     }
 }
+
+async function eliminarInstalacion(id) {
+    try {
+        await instanceService2.delete(`/instalaciones/${id}`);
+        await Swal.fire({
+            title: 'Instalación eliminada',
+            text: 'La instalación ha sido eliminada con éxito',
+            icon: 'success',
+        });
+        location.reload();
+    } catch (error) {
+        console.error(error);
+        await Swal.fire({
+            icon: 'error',
+            title: 'Error al eliminar la instalación',
+            text: 'Ha ocurrido un error al eliminar la instalación',
+        });
+    }
+}

@@ -62,7 +62,7 @@
                   url: '<?php echo URL_BASE_APP; ?>javascript/spanish-datatale.json',
                },
                ajax: {
-                  url: '<?php echo URL_API_M2; ?>/usuario-transportista',
+                  url: '<?php echo URL_API_M1; ?>/usuario-transportista',
                   dataSrc: ''
                },
                columns: [{
