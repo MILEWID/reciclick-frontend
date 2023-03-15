@@ -73,7 +73,7 @@
                   },
                   {
                      name: 'nombre',
-                     data: 'Usuario.nombre'
+                     data: 'Usuario.usuario'
                   },
                   {
                      name: 'cargo',

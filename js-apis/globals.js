@@ -64,7 +64,7 @@ async function obtenerTransportistasUsuarios(idSelect = '') {
     if (!selectTransportista) return;
     const fragment = document.createDocumentFragment();
     try {
-        const { data } = await instanceService3.get("/usuario-transportista")
+        const { data } = await instanceService1.get("/usuario-transportista")
         data.forEach(trans => {
             const op = document.createElement("OPTION");
             op.setAttribute("value", trans.id_transportista);

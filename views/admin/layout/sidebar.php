@@ -6,8 +6,8 @@
                <img src="<?php echo $_SESSION["userLoggedProfile"] ?>" alt="image" />
             </div>
             <div class="profile-name">
-               <p class="name">
-                  Bienvenido Raul
+               <p class="name" >
+               <?php  echo  $_SESSION["userLogged"]->usuario->nombre ?>
                </p>
                <p class="designation">
                   <?php echo $_SESSION["userLoggedRolText"] ?>

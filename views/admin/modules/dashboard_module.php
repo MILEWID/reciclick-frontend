@@ -25,9 +25,8 @@
          <div class="card-body">
             <h4 class="card-title">
                <i class="fas fa-chart-line"></i>
-               Sales
+               Kilogramos RAEE por Manifiesto
             </h4>
-            <h2 class="mb-5">24000 <span class="text-muted h4 font-weight-normal">Toneladas RAEE</span></h2>
             <div id="chart2" class="mt-3"></div>
          </div>
       </div>

@@ -24,7 +24,6 @@
       <script src="<?php echo URL_BASE_APP; ?>javascript/admin/dashboard.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
       <script>
-
          async function renderFigura1() {
             try {
 
@@ -73,56 +72,63 @@
                console.log(err);
             }
          }
-
          renderFigura1();
 
+         async function renderFigura2() {
+            try {
 
-         var options2 = {
-            series: [{
-               data: [21, 22, 10, 28, 16, 21, 13, 30]
-            }],
-            chart: {
-               height: 350,
-               type: 'bar',
-               events: {
-                  click: function(chart, w, e) {
-                     // console.log(chart, w, e)
-                  }
-               }
-            },
-            plotOptions: {
-               bar: {
-                  columnWidth: '45%',
-                  distributed: true,
-               }
-            },
-            dataLabels: {
-               enabled: false
-            },
-            legend: {
-               show: false
-            },
-            xaxis: {
-               categories: [
-                  ['John', 'Doe'],
-                  ['Joe', 'Smith'],
-                  ['Jake', 'Williams'],
-                  'Amber',
-                  ['Peter', 'Brown'],
-                  ['Mary', 'Evans'],
-                  ['David', 'Wilson'],
-                  ['Lily', 'Roberts'],
-               ],
-               labels: {
-                  style: {
-                     fontSize: '12px'
-                  }
-               }
+               const {
+                  data
+               } = await instanceService4.get('/reporte/toneladas-aee');
+
+               var options = {
+                  series: [{
+                     name: "kilogramos",
+                     data: data.datasets
+                  }],
+                  chart: {
+                     height: 350,
+                     type: 'bar',
+                     events: {
+                        click: function(chart, w, e) {
+                           // console.log(chart, w, e)
+                        }
+                     }
+                  },
+                  plotOptions: {
+                     bar: {
+                        columnWidth: '45%',
+                        distributed: true,
+                     }
+                  },
+                  dataLabels: {
+                     enabled: false
+                  },
+                  legend: {
+                     show: false
+                  },
+                  xaxis: {
+                     categories: data.labels,
+                     labels: {
+                        style: {
+                           fontSize: '12px'
+                        }
+                     }
+                  },
+               };
+
+               var chart = new ApexCharts(document.querySelector("#chart2"), options);
+               chart.render();
+
+            } catch (err) {
+               console.log(err);
             }
-         };
+         }
 
-         var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
-         chart2.render();
+
+
+
+         renderFigura2();
       </script>
 </body>
 

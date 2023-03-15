@@ -16,7 +16,6 @@
                 <th>Almacenamiento</th>
                 <th>Manifiesto </th>
                 <th>Acciones </th>
-
               </tr>
             </thead>
             <tbody>

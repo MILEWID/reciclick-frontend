@@ -537,8 +537,8 @@ body { margin-left: 0.25in; margin-right: 0.25in; margin-top: 0.75in; margin-bot
             <td class="column35">&nbsp;</td>
           </tr>
           <tr class="row1">
-            <td class="column0 style1 null">
-<div style="position: relative;"><img style="position: absolute; z-index: 1; left: 9px; top: 5px; width: 184px; height: 72px;"    src="<?php echo URL_BASE_APP; ?>admin/logoMae.jpg"   border="0" /></div></td>
+            <td class="column0 style1 null"> 
+<!-- <div style="position: relative;"><img style="position: absolute; z-index: 1; left: 9px; top: 5px; width: 184px; height: 72px;"    src="https://www.ambiente.gob.ec/wp-content/uploads/2012/09/LOGO6.jpg"  /></div></td> -->
             <td class="column1">&nbsp;</td>
             <td class="column2">&nbsp;</td>
             <td class="column3">&nbsp;</td>
