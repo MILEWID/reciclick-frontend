@@ -14,10 +14,5 @@ define("URL_API_M2", "https://microservice-prod.reciclick.angello-midev.store/ap
 // microservicio de transporte
 define("URL_API_M3", "https://microservice-transportation.reciclick.angello-midev.store/api/v1");
 // microservicio de almacenamiento - destinatario
-<<<<<<< HEAD
 define("URL_API_M4", "https://microservice-storage.reciclick.angello-midev.store/api/v1");
 session_start();
-=======
-define("URL_API_M4", "https://destinatario-service-reciclick.deploy.angello-midev.store/api/v1");
-session_start();
->>>>>>> a5f2c926dce4807184b6164ed33472e04a81d8aa
