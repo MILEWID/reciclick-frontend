@@ -5,7 +5,7 @@ $urlPath =  $_SERVER["REQUEST_URI"];
 $url = substr($urlPath, strlen($folderPath));
 
 define("URL", $url);
-define("URL_BASE_APP", "https://reciclick-app.angello-midev.store/");
+define("URL_BASE_APP", "http://localhost/reciclick-frontend/");
 
 //micriservicio de autenticacion 
 define("URL_API_M1", "https://microservice-auth.reciclick.angello-midev.store/api/v1");
